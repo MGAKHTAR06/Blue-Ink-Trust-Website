@@ -1,0 +1,713 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blue Ink Trust | Projects</title>
+  <link rel="stylesheet" href="Styles.css" />
+</head>
+
+<body class="projects-page">
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Blue Ink Trust Home">
+        <img src="Media/Blue Ink Trust Logo.png" alt="Blue Ink Trust logo">
+        <span class="logo-text">Blue Ink Trust</span>
+      </a>
+
+            <!-- Nav (same line) -->
+      <nav class="nav" aria-label="Primary">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link active" href="projects.html">Projects</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+            </nav>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <!-- Mobile nav -->
+    <nav id="mobile-nav" class="nav-mobile" aria-label="Mobile">
+      <a class="nav-link" href="index.html">Home</a>
+
+      <details class="mobile-drop">
+        <summary class="nav-link">About</summary>
+        <div class="mobile-drop-links">
+          <a class="nav-link" href="about.html">About Overview</a>
+          <a class="nav-link" href="birmingham-project.html">Birmingham Project</a>
+          <a class="nav-link" href="india-project.html">India Project</a>
+        </div>
+      </details>
+
+      <a class="nav-link active" href="projects.html">Projects</a>
+      <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="page-hero hero-with-slideshow">
+    <div class="hero-slideshow" data-hero-slideshow>
+      <img src="Media/award giving 2.jpg" class="hero-slide active" alt="Award giving">
+
+      </div>
+      <div class="page-hero-overlay">
+        <div class="container">
+          <h1>Projects</h1>
+          <p>Click any project to read more and learn how you can support.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Donation highlight banner -->
+    <section class="text-banner" aria-label="Donation highlights">
+      <div class="container text-banner-inner">
+        <strong>Support our work:</strong>
+        Boarding student <strong>£300</strong>/year • School bus seat <strong>£625</strong> • Feed a family of five <strong>£100</strong>/month
+      </div>
+    </section>
+
+    <!-- Projects grid -->
+    <section class="section">
+      <div class="container">
+        <div class="glass-panel">
+          <div class="section-head">
+            <h2>Ongoing Projects</h2>
+            <p class="muted-dark">These are active projects currently being delivered or funded.</p>
+          </div>
+
+          <div class="grid-3">
+
+            <!-- Project 1 -->
+            <button class="card clickable" type="button"
+              data-modal-title="Girls’ Boarding School Construction Project"
+              data-modal-template="tpl-girls-boarding">
+              <div class="card-media" style="background-image:url('Media/Girls school drawing 1.jpeg');"></div>
+              <h3>Girls’ Boarding Construction</h3>
+              <p>Building a three-storey school dedicated to girls’ education.</p>
+              <span class="tag">Education</span>
+            </button>
+
+            <!-- Project 2 -->
+            <button class="card clickable" type="button"
+              data-modal-title="School Bus Donation Project"
+              data-modal-template="tpl-school-bus">
+              <div class="card-media" style="background-image:url('Media/School Bus.jpg');"></div>
+              <h3>School Bus</h3>
+              <p>Safe, reliable transport so children can attend school consistently.</p>
+              <span class="tag">Access</span>
+            </button>
+
+            <!-- Project 3 -->
+            <button class="card clickable" type="button"
+              data-modal-title="Boarding Support – Boarding School"
+              data-modal-template="tpl-orphan-support">
+              <div class="card-media" style="background-image:url('Media/Orphan study.jpg');"></div>
+              <h3>Boarding Support</h3>
+              <p>Education, care, meals and a safe home for orphaned children.</p>
+              <span class="tag">Education</span>
+            </button>
+<!-- Project 4 -->
+<button class="card clickable" type="button"
+  data-modal-title="Funding a Student’s Education"
+  data-modal-template="tpl-student-education">
+  <div class="card-media" style="background-image:url('Media/Student education.jpg');"></div>
+  <h3>Student’s Education</h3>
+  <p>Support uniform, transport, supplies and tuition for a student.</p>
+
+  <span class="tag">Education</span>
+</button>
+
+<!-- Project 5 -->
+<button class="card clickable" type="button"
+  data-modal-title="School Lunch Programme"
+  data-modal-template="tpl-school-lunch">
+  <div class="card-media" style="background-image:url('Media/School lunch.jpeg');"></div>
+  <h3>School Lunch</h3>
+  <p>Nutritious meals so students can focus and learn.</p>
+
+  <span class="tag">Wellbeing</span>
+</button>
+
+<!-- Project 6 -->
+<button class="card clickable" type="button"
+  data-modal-title="Interactive Whiteboards in Classrooms"
+  data-modal-template="tpl-whiteboards">
+  <div class="card-media" style="background-image:url('Media/Whiteboard.jpg');"></div>
+  <h3>Interactive Whiteboards</h3>
+  <p>Better lessons with modern classroom technology.</p>
+  <span class="tag">Education</span>
+</button>
+
+<!-- Project 7 -->
+<button class="card clickable" type="button"
+  data-modal-title="Food Pack (Monthly Ration Support)"
+  data-modal-template="tpl-food-pack">
+  <div class="card-media" style="background-image:url('Media/Food pack.jpg');"></div>
+  <h3>Food Pack</h3>
+  <p>Monthly essentials to support a family in need.</p>
+
+  <span class="tag">Community</span>
+</button>
+
+<!-- Project 8 -->
+<button class="card clickable" type="button"
+  data-modal-title="Sewing Machine Programme"
+  data-modal-template="tpl-sewing-machine">
+  <div class="card-media" style="background-image:url('Media/Sewing.jpg');"></div>
+  <h3>Sewing Machines</h3>
+  <p>Helping widows learn skills and earn an income.</p>
+
+  <span class="tag">Livelihood</span>
+</button>
+
+<!-- Project 9 -->
+<button class="card clickable" type="button"
+  data-modal-title="Goat Rearing Programme"
+  data-modal-template="tpl-goat-rearing">
+  <div class="card-media" style="background-image:url('Media/Goat rearing.jpg');"></div>
+  <h3>Goat Rearing</h3>
+  <p>Supporting widows with a sustainable income source.</p>
+
+  <span class="tag">Livelihood</span>
+</button>
+
+
+          </div>
+
+          <div class="center" style="margin-top:14px;">
+            <a class="btn btn-primary" href="contact.html">Support a Project</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Donate / CTA -->
+    <section class="section">
+      <div class="container">
+        <div class="glass-panel">
+          <div class="grid-2" style="align-items:start;">
+            <div>
+              <h2>Support a project</h2>
+              <p class="muted-dark">
+                Donations help us deliver education support, safe facilities, meals, transport, and long-term opportunity.
+                If you’d like to sponsor a project or contribute regularly, contact us and we’ll guide you.
+              </p>
+              <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                <a class="btn btn-primary" href="contact.html">Contact / Donate</a>
+                <a class="btn" href="https://www.justgiving.com/charity/blueinktrust" target="_blank" rel="noopener">Donate via JustGiving</a>
+              </div>
+            </div>
+
+            <div>
+              <h3>Quick donation options</h3>
+              <ul class="nice-list">
+                <li><strong>£300</strong> supports a boarding student for one year</li>
+                <li><strong>£625</strong> helps sponsor a seat towards a school bus</li>
+                <li><strong>£100</strong> helps feed a family of five for a month</li>
+              </ul>
+              <p class="muted-dark" style="margin-top:10px;">
+                For bank details and donation references, please visit our Contact page.
+              </p>
+              <a class="btn btn-primary" href="contact.html">View Bank Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-label="Project details">
+      <div class="modal-card" role="document">
+        <button class="modal-close" type="button" data-close="true" aria-label="Close">×</button>
+        <h3 id="modalTitle">Title</h3>
+
+        <!-- IMPORTANT: this must be a div, not a p -->
+        <div id="modalBody"></div>
+
+        <div class="modal-actions">
+          <a class="btn btn-primary" id="modalLink" href="contact.html">Support this project</a>
+          <button class="btn" type="button" data-close="true">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================
+         MODAL TEMPLATES (SAFE)
+         Each includes a 2-image banner
+         ========================== -->
+
+    <!-- Project 1 template -->
+    <template id="tpl-girls-boarding">
+      <div class="modal-banner" data-slideshow>
+        <img src="Media/Girls School Drawing.jpeg" class="mini-slide active" alt="Girls’ school design and progress">
+        <img src="Media/Girls School eye view.jpeg" class="mini-slide" alt="Girls learning and support">
+      </div>
+
+      <p>
+        Blue Ink Trust is currently working towards the construction of a
+        <strong>three-storey school dedicated to girls’ education</strong>,
+        focusing on academic learning alongside essential life skills. This project aims to provide a safe,
+        structured, and empowering environment for girls from disadvantaged backgrounds.
+      </p>
+
+      <p>
+        The school will consist of <strong>36 rooms</strong>, including <strong>19 classrooms</strong>,
+        <strong>3 science laboratories</strong>, <strong>1 computer laboratory</strong>, <strong>1 library</strong>,
+        and <strong>12 boarding rooms</strong>. Once completed, the building will have the capacity to educate
+        <strong>up to 600 girls</strong> and provide boarding accommodation for
+        <strong>180 orphaned and underprivileged girls</strong>.
+      </p>
+
+      <p>
+        Construction is already underway, with the <strong>first floor completed</strong>, comprising
+        <strong>12 rooms</strong>. Continued support is now required to complete the remaining floors and essential facilities.
+      </p>
+
+      <h4>How you can support this project</h4>
+      <ul>
+        <li><strong>£6,000</strong> – Funds the construction of one classroom (25 × 30 ft)</li>
+        <li><strong>£150</strong> – Covers the cost of 100 bricks towards the building</li>
+      </ul>
+
+      <h4>How to donate</h4>
+      <h5>1. Bank transfer (preferred)</h5>
+      <p>
+        <strong>Account Name:</strong> Blue Ink Trust<br>
+        <strong>Sort Code:</strong> 30-00-03<br>
+        <strong>Account Number:</strong> 00459710<br>
+        <strong>Reference:</strong> Your name – Girls’ School &amp; College Construction
+      </p>
+
+      <h5>2. Donate via JustGiving</h5>
+      <p>
+        <a href="https://www.justgiving.com/charity/blueinktrust" target="_blank" rel="noopener">
+          Donate via JustGiving
+        </a>
+        <br><strong>Reference:</strong> Girls’ School &amp; College Construction
+      </p>
+
+      <h4>Receipts and donation updates</h4>
+      <p>
+        If you would like a receipt or wish to receive updates about your donation, please send your
+        <strong>payment reference and amount</strong>:
+      </p>
+      <ul>
+        <li>Email: <a href="mailto:info@blueinktrust.org">info@blueinktrust.org</a></li>
+        <li>WhatsApp / Mobile: <a href="tel:07817237765">07817 237765</a></li>
+      </ul>
+
+      <p><strong>
+        Every contribution brings us closer to completing this school and transforming the lives of girls through education, safety, and opportunity.
+      </strong></p>
+    </template>
+
+    <!-- Project 2 template -->
+    <template id="tpl-school-bus">
+      <div class="modal-banner" data-slideshow>
+        <img src="Media/School Bus.jpg" class="mini-slide active" alt="School transport support">
+        <img src="Media/School Bus 2 .jpg" class="mini-slide" alt="Children arriving safely to school">
+      </div>
+
+      <p>
+  A dedicated school bus helps children reach school safely and consistently—especially those who travel long distances or face unsafe routes.
+  Reliable transport improves attendance, punctuality, and overall learning outcomes.
+</p>
+
+<p>
+  By adding <strong>two additional buses</strong>, we aim to reach more villages and help many more children access education.
+  A <strong>53-seater bus costs £33,000</strong>.
+</p>
+
+<h4>How you can support</h4>
+<ul>
+  <li><strong>£625</strong> – Helps sponsor a seat towards a school bus</li>
+  
+</ul>
+
+<h4>How to donate</h4>
+
+<h5>1. Bank transfer</h5>
+<p>
+  <strong>Account Name:</strong> Blue Ink Trust<br>
+  <strong>Sort Code:</strong> 30-00-03<br>
+  <strong>Account Number:</strong> 00459710<br>
+  <strong>Reference:</strong> Your name – School Bus
+</p>
+
+<h5>2. Donate via JustGiving</h5>
+<p>
+  <a href="https://www.justgiving.com/charity/blueinktrust" target="_blank" rel="noopener">
+    Donate via JustGiving
+  </a>
+  <br><strong>Reference:</strong> School Bus
+</p>
+
+<h4>Receipts and donation updates</h4>
+<p>
+  If you would like a receipt or wish to receive updates about your donation, please send your
+  <strong>payment reference and amount</strong>:
+</p>
+<ul>
+  <li>Email: <a href="mailto:info@blueinktrust.org">info@blueinktrust.org</a></li>
+  <li>WhatsApp / Mobile: <a href="tel:07817237765">07817 237765</a></li>
+</ul>
+
+    </template>
+
+    <!-- Project 3 template -->
+    <template id="tpl-orphan-support">
+      <div class="modal-banner" data-slideshow>
+        <img src="media/orphan-1.jpg" class="mini-slide active" alt="Students studying in boarding school">
+        <img src="Media/orphan-2.jpg" class="mini-slide" alt="Boarding care and learning environment">
+      </div>
+<p>
+
+  For just <strong>£300 per year</strong>, you can help provide an uninterrupted,
+  high-quality education for a student—supported academically, emotionally, and practically
+  from the moment they join us and even after they leave.
+</p>
+
+<p>
+  Our boarding facility is designed to support students
+  from different districts and states, giving them the opportunity to learn, grow, and
+  become a <strong>beacon of hope</strong> for their families and communities.
+</p>
+
+
+
+<h4>What £300 covers</h4>
+<ul>
+  <li>Accommodation and living expenses</li>
+  <li>Nutritious daily meals</li>
+  <li>Clothing and basic necessities</li>
+  <li>Tuition fees</li>
+  <li>School supplies and learning materials</li>
+  <li>Travel to and from the child’s village</li>
+</ul>
+
+<h4>How to donate</h4>
+
+<h5>1. Bank transfer</h5>
+<p>
+  <strong>Account Name:</strong> Blue Ink Trust<br>
+  <strong>Sort Code:</strong> 30-00-03<br>
+  <strong>Account Number:</strong> 00459710<br>
+  <strong>Reference:</strong> Your name – Boarding Student
+</p>
+
+<h5>2. Donate via JustGiving</h5>
+<p>
+  <a href="https://www.justgiving.com/charity/blueinktrust" target="_blank" rel="noopener">
+    Donate via JustGiving
+  </a>
+  <br><strong>Reference:</strong> Boarding Student
+</p>
+
+<h4>Receipts and donation updates</h4>
+<p>
+  If you would like a receipt or wish to receive updates about your donation, please send your
+  <strong>payment reference and amount</strong>:
+</p>
+<ul>
+  <li>Email: <a href="mailto:info@blueinktrust.org">info@blueinktrust.org</a></li>
+  <li>WhatsApp / Mobile: <a href="tel:07817237765">07817 237765</a></li>
+</ul>
+
+        </template>
+
+<!-- Project 4 template -->
+<template id="tpl-student-education">
+  <div class="modal-banner" data-slideshow>
+    <img src="Media/student-education-1.jpg" class="mini-slide active" alt="Students at school">
+    <img src="Media/student-education-2.jpg" class="mini-slide" alt="School support resources">
+  </div>
+
+  <p>
+The school is located in a highly deprived area where many families struggle to afford basic necessities, let alone thinking of sending their children to school. We urge you to join hands in breaking down the barriers to education.
+  </p>
+
+  <h4>With £125 per year, one student can receive</h4>
+  <ul>
+    <li>School uniform</li>
+    <li>Travel to and from their village via the school bus</li>
+    <li>Tuition fees covered (teacher salary and essential costs such as electricity)</li>
+    <li>School supplies (bag, pencil case, pens, textbooks, exercise books)</li>
+    <li>Lunch provided at school</li>
+  </ul>
+
+  <h4>How to donate</h4>
+  <h5>1. Bank transfer</h5>
+  <p>
+    <strong>Account Name:</strong> Blue Ink Trust<br>
+    <strong>Sort Code:</strong> 30-00-03<br>
+    <strong>Account Number:</strong> 00459710<br>
+    <strong>Reference:</strong> Your name – Student’s Education
+  </p>
+
+  <h5>2. Donate via JustGiving</h5>
+  <p>
+    <a href="https://www.justgiving.com/charity/blueinktrust" target="_blank" rel="noopener">Donate via JustGiving</a>
+    <br><strong>Reference:</strong> Student’s Education
+  </p>
+
+  <h4>Receipts and donation updates</h4>
+  <p>
+    If you would like a receipt or wish to receive updates about your donation, please send your
+    <strong>payment reference and amount</strong>:
+  </p>
+  <ul>
+    <li>Email: <a href="mailto:info@blueinktrust.org">info@blueinktrust.org</a></li>
+    <li>WhatsApp / Mobile: <a href="tel:07817237765">07817 237765</a></li>
+  </ul>
+</template>
+
+<!-- Project 5 template -->
+<template id="tpl-school-lunch">
+  <div class="modal-banner" data-slideshow>
+    <img src="Media/school-lunch-1.jpg" class="mini-slide active" alt="School lunch being served">
+    <img src="Media/school-lunch-2.jpg" class="mini-slide" alt="Students eating lunch at school">
+  </div>
+
+  <p>
+Many can’t afford getting a healthy meal that supports students grow well. Your support towards meal is highly rewarding and greatly appreciated. 
+  </p>
+
+  <h4>Cost</h4>
+  <ul>
+    <li><strong>£2.00</strong> – Provides one lunch meal for one student for the day</li>
+  </ul>
+
+  <h4>How to donate</h4>
+  <h5>1. Bank transfer</h5>
+  <p>
+    <strong>Account Name:</strong> Blue Ink Trust<br>
+    <strong>Sort Code:</strong> 30-00-03<br>
+    <strong>Account Number:</strong> 00459710<br>
+    <strong>Reference:</strong> Your name – School Lunch Programme
+  </p>
+
+  <h5>2. Donate via JustGiving</h5>
+  <p>
+    <a href="https://www.justgiving.com/charity/blueinktrust" target="_blank" rel="noopener">Donate via JustGiving</a>
+    <br><strong>Reference:</strong> School Lunch Programme
+  </p>
+
+  <h4>Receipts and donation updates</h4>
+  <p>
+    If you would like a receipt or wish to receive updates about your donation, please send your
+    <strong>payment reference and amount</strong>:
+  </p>
+  <ul>
+    <li>Email: <a href="mailto:info@blueinktrust.org">info@blueinktrust.org</a></li>
+    <li>WhatsApp / Mobile: <a href="tel:07817237765">07817 237765</a></li>
+  </ul>
+</template>
+
+<!-- Project 6 template -->
+<template id="tpl-whiteboards">
+  <div class="modal-banner" data-slideshow>
+    <img src="Media/whiteboard-1.jpg" class="mini-slide active" alt="Interactive lessons in classroom">
+    <img src="Media/whiteboard-2.jpg" class="mini-slide" alt="Students learning with classroom technology">
+  </div>
+
+  <p>
+    Blue Ink Trust is constantly working to improve education quality. One key improvement is providing proper equipment such as
+    interactive whiteboards in classrooms. We are currently raising funds for <strong>4 interactive whiteboards</strong> for higher classes,
+    helping teachers deliver more impactful lessons.
+  </p>
+
+  <h4>Cost</h4>
+  <ul>
+    <li><strong>£4,000</strong> – Cost of one 86” interactive whiteboard</li>
+  </ul>
+
+  <h4>How to donate</h4>
+  <h5>1. Bank transfer</h5>
+  <p>
+    <strong>Account Name:</strong> Blue Ink Trust<br>
+    <strong>Sort Code:</strong> 30-00-03<br>
+    <strong>Account Number:</strong> 00459710<br>
+    <strong>Reference:</strong> Your name – Interactive Whiteboard
+  </p>
+
+  <h5>2. Donate via JustGiving</h5>
+  <p>
+    <a href="https://www.justgiving.com/charity/blueinktrust" target="_blank" rel="noopener">Donate via JustGiving</a>
+    <br><strong>Reference:</strong> Interactive Whiteboard
+  </p>
+
+  <h4>Receipts and donation updates</h4>
+  <p>
+    If you would like a receipt or wish to receive updates about your donation, please send your
+    <strong>payment reference and amount</strong>:
+  </p>
+  <ul>
+    <li>Email: <a href="mailto:info@blueinktrust.org">info@blueinktrust.org</a></li>
+    <li>WhatsApp / Mobile: <a href="tel:07817237765">07817 237765</a></li>
+  </ul>
+</template>
+
+<!-- Project 7 template -->
+<template id="tpl-food-pack">
+  <div class="modal-banner" data-slideshow>
+    <img src="Media/food-pack-1.png" class="mini-slide active" alt="Food ration items">
+    <img src="Media/food-pack-2.jpg" class="mini-slide" alt="Family receiving food support">
+  </div>
+
+  <p>
+    Many families in the area do not produce enough rice/wheat to sell and earn money for essential foods such as meat and vegetables.
+    Blue Ink Trust has started a food ration programme where a poor family with very little income can receive a monthly food pack.
+  </p>
+
+  <h4>What the food pack contains</h4>
+  <ul>
+    <li>Rice</li>
+    <li>Wheat</li>
+    <li>Lentils</li>
+    <li>Tea</li>
+    <li>Sugar</li>
+    <li>Salt</li>
+    <li>Oil</li>
+    <li>Soya chunks</li>
+    <li>Cooking gas</li>
+  </ul>
+
+  <h4>Cost</h4>
+  <ul>
+    <li><strong>£35</strong> – Feeds a family of 5 for a month</li>
+  </ul>
+
+  <h4>How to donate</h4>
+  <h5>1. Bank transfer</h5>
+  <p>
+    <strong>Account Name:</strong> Blue Ink Trust<br>
+    <strong>Sort Code:</strong> 30-00-03<br>
+    <strong>Account Number:</strong> 00459710<br>
+    <strong>Reference:</strong> Your name – Food Pack
+  </p>
+
+  <h5>2. Donate via JustGiving</h5>
+  <p>
+    <a href="https://www.justgiving.com/charity/blueinktrust" target="_blank" rel="noopener">Donate via JustGiving</a>
+    <br><strong>Reference:</strong> Food Pack
+  </p>
+
+  <h4>Receipts and donation updates</h4>
+  <p>
+    If you would like a receipt or wish to receive updates about your donation, please send your
+    <strong>payment reference and amount</strong>:
+  </p>
+  <ul>
+    <li>Email: <a href="mailto:info@blueinktrust.org">info@blueinktrust.org</a></li>
+    <li>WhatsApp / Mobile: <a href="tel:07817237765">07817 237765</a></li>
+  </ul>
+</template>
+
+<!-- Project 8 template -->
+<template id="tpl-sewing-machine">
+  <div class="modal-banner" data-slideshow>
+    <img src="Media/sewing-1.jpg" class="mini-slide active" alt="Sewing skills training">
+    <img src="Media/sewing-2.jpg" class="mini-slide" alt="Sewing machine support for widows">
+  </div>
+
+  <p>
+    Work for women in the area is often non-existent. To support widows and women with little or no income,
+    Blue Ink Trust runs a programme that teaches widows to sew clothes so they can earn.
+    We teach stitching skills, provide a sewing machine, and help connect them with tailoring shops to start earning.
+  </p>
+
+  <h4>Cost</h4>
+  <ul>
+    <li><strong>£90</strong> – Cost of one sewing machine</li>
+  </ul>
+
+  <h4>How to donate</h4>
+  <h5>1. Bank transfer</h5>
+  <p>
+    <strong>Account Name:</strong> Blue Ink Trust<br>
+    <strong>Sort Code:</strong> 30-00-03<br>
+    <strong>Account Number:</strong> 00459710<br>
+    <strong>Reference:</strong> Your name – Sewing Machine
+  </p>
+
+  <h5>2. Donate via JustGiving</h5>
+  <p>
+    <a href="https://www.justgiving.com/charity/blueinktrust" target="_blank" rel="noopener">Donate via JustGiving</a>
+    <br><strong>Reference:</strong> Sewing Machine
+  </p>
+
+  <h4>Receipts and donation updates</h4>
+  <p>
+    If you would like a receipt or wish to receive updates about your donation, please send your
+    <strong>payment reference and amount</strong>:
+  </p>
+  <ul>
+    <li>Email: <a href="mailto:info@blueinktrust.org">info@blueinktrust.org</a></li>
+    <li>WhatsApp / Mobile: <a href="tel:07817237765">07817 237765</a></li>
+  </ul>
+</template>
+
+<!-- Project 9 template -->
+<template id="tpl-goat-rearing">
+  <div class="modal-banner" data-slideshow>
+    <img src="Media/goat-1.jpg" class="mini-slide active" alt="Goat rearing support programme">
+    <img src="Media/goat-2.png" class="mini-slide" alt="Sustainable livelihood support">
+  </div>
+
+  <p>
+Some have no source of income whatsoever. Blue Ink Trust supports such families through a goat rearing programme, providing a female goat which can produce <strong>1–2 kids per year</strong>, which gives them some income.</p>
+
+  <h4>Cost</h4>
+  <ul>
+    <li><strong>£90</strong> – Cost of one goat</li>
+  </ul>
+
+  <h4>How to donate</h4>
+  <h5>1. Bank transfer</h5>
+  <p>
+    <strong>Account Name:</strong> Blue Ink Trust<br>
+    <strong>Sort Code:</strong> 30-00-03<br>
+    <strong>Account Number:</strong> 00459710<br>
+    <strong>Reference:</strong> Your name – Goat Rearing
+  </p>
+
+  <h5>2. Donate via JustGiving</h5>
+  <p>
+    <a href="https://www.justgiving.com/charity/blueinktrust" target="_blank" rel="noopener">Donate via JustGiving</a>
+    <br><strong>Reference:</strong> Goat Rearing
+  </p>
+
+  <h4>Receipts and donation updates</h4>
+  <p>
+    If you would like a receipt or wish to receive updates about your donation, please send your
+    <strong>payment reference and amount</strong>:
+  </p>
+  <ul>
+    <li>Email: <a href="mailto:info@blueinktrust.org">info@blueinktrust.org</a></li>
+    <li>WhatsApp / Mobile: <a href="tel:07817237765">07817 237765</a></li>
+  </ul>
+</template>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Blue Ink Trust</p>
+<p>Charity No: 1136307</p>
+
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
