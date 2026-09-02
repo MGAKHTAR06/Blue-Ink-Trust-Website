@@ -36,18 +36,8 @@ Website for **Blue Ink Trust**, a UK-registered charity (charity no. **1136307**
    # or open index.html directly
    ```
 
-## 📂 Project Structure
 
-```
-blue-ink-trust/
-├── index.html
-├── /css
-├── /js
-├── /assets        # images, favicon
-└── README.md
-```
-> *Update to match your actual folder layout.*
 
 ## 👤 Author
 
-Web development and SEO by **Musab** — [LinkedIn](#) · [Portfolio](#)
+Web development and SEO by **Musab** — [LinkedIn](https://www.linkedin.com/in/musab-akhtar/) 
