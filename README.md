@@ -1,6 +1,6 @@
-# Blue Ink Trust — Charity Website 🤝
+# Blue Ink Trust — Charity Website 
 
-Website for **Blue Ink Trust**, a UK-registered charity (charity no. **1136307**). This repo covers the site's front-end, SEO and ongoing maintenance.
+Front-end, SEO and maintenance work for **Blue Ink Trust**, a UK-registered charity (charity no. **1136307**).
 
 🌐 **Live:** [blueinktrust.org](https://blueinktrust.org)
 
@@ -10,31 +10,29 @@ Website for **Blue Ink Trust**, a UK-registered charity (charity no. **1136307**
 
 ---
 
-## ✨ Highlights
+## Overview
 
-- **SEO overhaul** to improve search discoverability
-- **Favicon generation** and consistent branding across pages
-- Site-wide **CSS / JS fixes** and maintenance
-- Content presenting the charity's mission and work
+This repo covers the ongoing web work for the charity's public website — improving how it's found, keeping the branding consistent, and fixing issues across the site.
 
-## 🛠️ Tech Stack
+## What I Did
 
-- **Front-end:** HTML / CSS / JavaScript
-- **Focus areas:** SEO, accessibility, performance
+- **SEO overhaul** — reworked the site's SEO to improve search visibility and discoverability, so the charity's work reaches more people.
+- **Branding & favicon** — generated and applied favicons and tidied up branding for a consistent look across pages.
+- **CSS / JS fixes** — resolved styling and scripting issues site-wide and carried out general maintenance.
+- **Ongoing upkeep** — treated the site as something maintained over time rather than a one-off build.
 
-## 🚀 Getting Started
+## Focus Areas
 
-1. **Clone the repo**
-   ```bash
-   git clone https://github.com/<your-username>/blue-ink-trust.git
-   cd blue-ink-trust
-   ```
+- Search visibility (on-page SEO, metadata, discoverability)
+- Consistent cross-page branding
+- Front-end reliability and clean-up
 
-2. **Run locally** — static site, so:
-   ```bash
-   npx serve .
-   # or open index.html directly
-   ```
+## Tech Stack
+
+| Layer | Technology |
+| ----- | ---------- |
+| Front-end | HTML / CSS / JavaScript |
+| Focus | SEO · branding · maintenance |
 
 
 
