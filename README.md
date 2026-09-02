@@ -1,42 +1,53 @@
-# Blue Ink Trust Website
+# Blue Ink Trust — Charity Website 🤝
 
-A modern website developed for **Blue Ink Trust**, designed to provide information about the charity, its mission, projects, and the work it carries out to support communities through education and other initiatives.
+Website for **Blue Ink Trust**, a UK-registered charity (charity no. **1136307**). This repo covers the site's front-end, SEO and ongoing maintenance.
 
-## 🌍 About Blue Ink Trust
+🌐 **Live:** [blueinktrust.org](https://blueinktrust.org)
 
-Blue Ink Trust is a charitable organisation focused on making a positive impact through education and community development.
-
-This website provides a central platform where visitors can:
-
-* Learn about Blue Ink Trust and its mission
-* Explore the charity's projects and initiatives
-* Discover the impact of its work
-* Find information about the Blue Ink School
-* Learn how to support and get involved with the charity
-* Access important updates and information
-
-## ✨ Features
-
-* 📱 **Responsive Design** – Optimised for desktop, tablet, and mobile devices
-* 🏫 **Project Information** – Showcase the projects and initiatives run by Blue Ink Trust
-* 🎓 **Blue Ink School** – Information about the school's work and educational impact
-* ℹ️ **About Section** – Learn about the charity, its mission, and its goals
-* 🤝 **Get Involved** – Information for individuals who want to support the organisation
-* 🖥️ **Modern User Interface** – A clean and accessible design focused on providing a simple user experience
-
-## 🛠️ Technologies Used
-
-This project was built using:
-
-* **Next.js**
-* **React**
-* **TypeScript**
-* **Tailwind CSS**
-
-## 👨‍💻 Developer
-
-Developed by **Musab Akhtar** as part of the ongoing development of the Blue Ink Trust digital platform.
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
 
 ---
 
-**Blue Ink Trust — Empowering communities through education and opportunity.**
+## ✨ Highlights
+
+- **SEO overhaul** to improve search discoverability
+- **Favicon generation** and consistent branding across pages
+- Site-wide **CSS / JS fixes** and maintenance
+- Content presenting the charity's mission and work
+
+## 🛠️ Tech Stack
+
+- **Front-end:** HTML / CSS / JavaScript
+- **Focus areas:** SEO, accessibility, performance
+
+## 🚀 Getting Started
+
+1. **Clone the repo**
+   ```bash
+   git clone https://github.com/<your-username>/blue-ink-trust.git
+   cd blue-ink-trust
+   ```
+
+2. **Run locally** — static site, so:
+   ```bash
+   npx serve .
+   # or open index.html directly
+   ```
+
+## 📂 Project Structure
+
+```
+blue-ink-trust/
+├── index.html
+├── /css
+├── /js
+├── /assets        # images, favicon
+└── README.md
+```
+> *Update to match your actual folder layout.*
+
+## 👤 Author
+
+Web development and SEO by **Musab** — [LinkedIn](#) · [Portfolio](#)
