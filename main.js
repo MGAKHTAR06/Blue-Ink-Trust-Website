@@ -128,6 +128,11 @@ document.querySelectorAll(".slideshow").forEach(initSlideshow);
     modal.classList.add("open");
     modal.setAttribute("aria-hidden", "false");
     document.body.style.overflow = "hidden";
+
+    // Always open scrolled to the top, regardless of where the last modal was left
+    modal.scrollTop = 0;
+    var card = modal.querySelector(".modal-card");
+    if (card) card.scrollTop = 0;
   }
 
   function close() {
