@@ -1,0 +1,1039 @@
+/* =========================================
+   BLUE INK TRUST — Styles.css (CLEAN BUILD)
+   ========================================= */
+
+/* ---------- Theme ---------- */
+:root{
+  --bg: #1082c4;
+
+  --glass: rgba(255,255,255,0.78);
+  --glass2: rgba(255,255,255,0.65);
+
+  --textDark: #0b1b2a;
+  --mutedDark: rgba(11,27,42,0.72);
+
+  --border: rgba(255,255,255,0.55);
+  --borderDark: rgba(11,27,42,0.14);
+
+  --shadow: 0 14px 35px rgba(0,0,0,0.20);
+  --radius: 18px;
+}
+
+/* ---------- Base ---------- */
+*{ box-sizing:border-box; }
+html, body{ margin:0; padding:0; }
+body{
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: #fff;
+  line-height: 1.6;
+}
+
+a{ color: inherit; text-decoration: none; }
+a:hover{ text-decoration: underline; }
+
+.container{ width: min(1100px, 92%); margin: 0 auto; }
+
+/* A11y */
+.sr-only{
+  position:absolute;
+  width:1px; height:1px;
+  padding:0; margin:-1px;
+  overflow:hidden; clip: rect(0,0,0,0);
+  white-space:nowrap; border:0;
+}
+
+.skip-link{
+  position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;
+}
+.skip-link:focus{
+  left:16px; top:16px;
+  width:auto; height:auto;
+  background:#000;
+  color:#fff;
+  padding:10px 12px;
+  border-radius:10px;
+  z-index: 10000;
+}
+
+/* =========================================
+   HEADER / NAV
+   ========================================= */
+.site-header{
+  position: sticky;
+  top: 0;
+  z-index: 10000;                 /* always above hero/sections */
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.55);
+  border-bottom: 1px solid rgba(255,255,255,0.45);
+}
+
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  padding: 14px 0;
+  gap: 14px;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  font-weight: 900;
+  color: var(--textDark);
+}
+
+.logo img{
+  height: 32px;         /* logo not massive */
+  width: auto;
+  display: block;
+}
+
+.logo-text{ font-weight: 900; }
+
+.nav{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content:flex-end;
+}
+
+.nav-link{
+  padding: 8px 10px;
+  border-radius: 12px;
+  color: var(--textDark);
+  opacity: 0.92;
+  font-weight: 800;
+}
+.nav-link:hover{
+  text-decoration:none;
+  background: rgba(255,255,255,0.65);
+}
+.nav-link.active{
+  background: rgba(255,255,255,0.90);
+  border: 1px solid var(--borderDark);
+}
+
+.nav-cta{ margin-left: 6px; }
+
+/* Desktop dropdown */
+.nav-dropdown{ position: relative; }
+.nav-dropbtn{ cursor:pointer; }
+
+.nav-dropmenu{
+  position:absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  min-width: 220px;
+  padding: 10px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.85);
+  border: 1px solid rgba(11,27,42,0.14);
+  box-shadow: 0 14px 35px rgba(0,0,0,0.18);
+  display:none;
+  z-index: 10001; /* above header too */
+}
+.nav-dropdown:hover .nav-dropmenu{
+  display:grid;
+  gap: 8px;
+}
+.nav-dropmenu .nav-link{
+  background: rgba(255,255,255,0.9);
+  border: 1px solid rgba(11,27,42,0.10);
+}
+
+/* Mobile nav */
+.nav-toggle{
+  display:none;
+  background: rgba(255,255,255,0.65);
+  border: 1px solid var(--borderDark);
+  border-radius: 12px;
+  padding: 10px 12px;
+  color: var(--textDark);
+}
+
+.hamburger{
+  display:block;
+  width: 22px;
+  height: 2px;
+  background: var(--textDark);
+  position: relative;
+}
+.hamburger::before,
+.hamburger::after{
+  content:"";
+  position:absolute;
+  left:0;
+  width: 22px;
+  height: 2px;
+  background: var(--textDark);
+}
+.hamburger::before{ top:-7px; }
+.hamburger::after{ top:7px; }
+
+.nav-mobile{
+  display:none;
+  padding: 12px 0 16px;
+  border-top: 1px solid rgba(11,27,42,0.12);
+  background: rgba(255,255,255,0.62);
+}
+.nav-mobile.open{
+  display:grid;
+  gap: 10px;
+}
+.nav-mobile .nav-link{
+  display:block;
+  width: 92%;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.80);
+  border: 1px solid var(--borderDark);
+}
+.nav-mobile .btn{ width: 92%; margin: 0 auto; }
+
+.mobile-drop{ width: 92%; margin: 0 auto; }
+.mobile-drop summary{ list-style:none; }
+.mobile-drop summary::-webkit-details-marker{ display:none; }
+.mobile-drop-links{ display:grid; gap:10px; margin-top:10px; }
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--borderDark);
+  background: rgba(255,255,255,0.75);
+  cursor:pointer;
+  font-weight: 900;
+  color: var(--textDark);
+  transition: transform 180ms ease;
+}
+.btn:hover{ text-decoration:none; transform: translateY(-1px); }
+
+.btn-primary{
+  border: none;
+  background: rgba(255,255,255,0.95);
+  color: var(--textDark);
+}
+
+/* =========================================
+   HERO (image banner) + HERO SLIDESHOW
+   ========================================= */
+.page-hero{
+  position: relative;
+  min-height: 320px;
+  border-bottom: 1px solid rgba(255,255,255,0.35);
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Dark overlay for readability */
+.page-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: rgba(0,0,0,0.45);
+  z-index: 1;
+}
+
+/* Overlay content */
+.page-hero-overlay{
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;     /* 👈 move content to bottom */
+  padding: 0 0 48px 0;       /* 👈 space from bottom */
+}
+
+/* If you want centered content instead of bottom aligned */
+.page-hero.centered .page-hero-overlay{
+  align-items:center;
+}
+
+.page-hero h1{ margin:0 0 6px; }
+.page-hero p{ margin:0; max-width: 75ch; opacity: 0.92; }
+
+/* Hero slideshow background (behind overlay) */
+.hero-with-slideshow{
+  height: 70vh;
+  min-height: 420px;
+  max-height: 700px;
+}
+
+.hero-slideshow{
+  position:absolute;
+  inset:0;
+  z-index: 0; /* behind ::before overlay */
+}
+
+.hero-slideshow .hero-slide{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit: cover;         /* ✅ frame fixed, image fits nicely */
+  object-position: center;
+  opacity: 0;
+  transition: opacity 800ms ease;
+}
+
+.hero-slideshow .hero-slide.active{ opacity: 1; }
+
+/* =========================================
+   TEXT BANNER (regular)
+   ========================================= */
+.text-banner{
+  padding: 12px 0;
+  background: transparent; /* no extra strip */
+  border-bottom: 1px solid rgba(255,255,255,0.35);
+}
+.text-banner-inner{
+  color: rgba(11,27,42,0.92);
+  background: rgba(255,255,255,0.75);
+  border: 1px solid rgba(11,27,42,0.12);
+  border-radius: 14px;
+  padding: 12px 14px;
+}
+
+/* =========================================
+   ROLLING BANNER (marquee)
+   ========================================= */
+.rolling-banner .rolling-viewport{
+  overflow:hidden;
+  background: rgba(255,255,255,0.75);
+  border: 1px solid rgba(11,27,42,0.12);
+  border-radius: 14px;
+  padding: 12px 14px;
+}
+
+.rolling-banner .rolling-track{
+  display:flex;
+  width:max-content;
+  will-change: transform;
+  animation: rolling-marquee 18s linear infinite;
+  transform: translate3d(0,0,0);
+}
+
+.rolling-banner .rolling-content{
+  display:inline-flex;
+  align-items:center;
+  gap: 18px;
+  white-space: nowrap;
+  color: rgba(11,27,42,0.92);
+  font-weight: 700;
+  padding-right: 18px;
+}
+
+.rolling-banner .sep{
+  opacity: 0.7;
+  font-weight: 900;
+}
+
+@keyframes rolling-marquee{
+  from { transform: translate3d(0,0,0); }
+  to   { transform: translate3d(-50%,0,0); }
+}
+
+.rolling-banner:hover .rolling-track{
+  animation-play-state: paused;
+}
+
+/* =========================================
+   SECTIONS + GLASS PANELS
+   ========================================= */
+.section{ padding: 44px 0; position: relative; z-index: 1; }
+
+.glass-panel{
+  background: rgba(255,255,255,0.75);
+  border: 1px solid rgba(255,255,255,0.55);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: 0 14px 35px rgba(0,0,0,0.18);
+  color: var(--textDark);
+}
+
+.muted-dark{ color: var(--mutedDark); }
+
+.section-head{ margin-bottom: 14px; }
+
+/* =========================================
+   GRIDS / CARDS
+   ========================================= */
+.grid-3{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.grid-2{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.center{ display:flex; justify-content:center; }
+
+.card{
+  border: 1px solid rgba(255,255,255,0.55);
+  border-radius: var(--radius);
+  background: var(--glass2);
+  padding: 16px;
+  text-align: left;
+  color: var(--textDark);
+  transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.card h3{ margin: 10px 0 6px; }
+.card p{ margin: 0; color: var(--mutedDark); }
+
+.clickable{ cursor:pointer; }
+.clickable:hover{
+  transform: translateY(-3px);
+  background: rgba(255,255,255,0.86);
+  border-color: rgba(255,255,255,0.75);
+}
+
+/* Card media (image box) */
+.card-media{
+  height: 260px; /* simpler + consistent */
+  border-radius: 18px;
+  background-color: rgba(255,255,255,0.85);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 2px solid rgba(255,255,255,0.7);
+  margin-bottom: 14px;
+  transition: transform 0.35s ease;
+}
+.clickable:hover .card-media{ transform: scale(1.03); }
+
+.tag, .pill{
+  display:inline-block;
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: rgba(11,27,42,0.75);
+  border: 1px solid rgba(11,27,42,0.14);
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.75);
+}
+
+/* =========================================
+   FORMS
+   ========================================= */
+.contact-form .form-group{ display:flex; flex-direction:column; gap:6px; margin-bottom: 12px; }
+label{ font-weight: 900; font-size: 0.95rem; color: var(--textDark); }
+
+input, textarea{
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(11,27,42,0.16);
+  background: rgba(255,255,255,0.85);
+  color: var(--textDark);
+  padding: 12px;
+  outline: none;
+}
+textarea{ resize: vertical; }
+input:focus, textarea:focus{ border-color: rgba(16,130,196,0.65); }
+
+.nice-list{ margin: 10px 0 0; padding-left: 18px; }
+.nice-list li{ margin: 8px 0; }
+
+/* =========================================
+   ABOUT PAGE CONTENT BLOCK (text + image)
+   ========================================= */
+.content-block{
+  display:grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 14px;
+  align-items:start;
+  margin-top: 14px;
+}
+
+.content-media img{
+  width: 100%;
+  height: clamp(220px, 28vw, 340px);
+  object-fit: cover;
+  border-radius: 18px;
+  border: 2px solid rgba(255,255,255,0.7);
+  box-shadow: 0 14px 35px rgba(0,0,0,0.18);
+}
+
+.soft-rule{
+  border:none;
+  border-top: 1px solid rgba(11,27,42,0.12);
+  margin: 18px 0;
+}
+
+/* =========================================
+   MINI SLIDESHOW (section images + modal banners)
+   ========================================= */
+.mini-slideshow{
+  position: relative;
+  width: 100%;
+  height: clamp(220px, 28vw, 340px);
+  border-radius: 18px;
+  overflow: hidden;
+  border: 2px solid rgba(255,255,255,0.7);
+  box-shadow: 0 14px 35px rgba(0,0,0,0.18);
+}
+
+.mini-slide{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  opacity:0;
+  transition: opacity 600ms ease;
+}
+.mini-slide.active{ opacity: 1; }
+
+/* Modal banner: keep frame fixed, image fits inside (no cropping) */
+.modal-banner{
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 14px;
+  overflow: hidden;
+  margin: 10px 0 14px;
+  background: rgba(255,255,255,0.25);
+}
+
+.modal-banner .mini-slide{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit: contain;   /* ✅ fits whole image */
+  object-position: center;
+  opacity:0;
+  transition: opacity 600ms ease;
+}
+.modal-banner .mini-slide.active{ opacity:1; }
+
+/* =========================================
+   MODAL (scrollable body)
+   ========================================= */
+.modal{
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items:center;
+  justify-content:center;
+  padding: 16px;
+  background: rgba(0,0,0,0.55);
+  z-index: 20000; /* above header */
+}
+.modal.open{ display:flex; }
+
+.modal-card{
+  width: min(720px, 100%);
+  max-height: 85vh;
+  background: rgba(255,255,255,0.92);
+  border-radius: var(--radius);
+  padding: 18px;
+  border: 1px solid rgba(11,27,42,0.14);
+  box-shadow: 0 14px 35px rgba(0,0,0,0.25);
+  color: var(--textDark);
+  display:flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.modal-close{
+  position:absolute;
+  top: 10px;
+  right: 10px;
+  border: 1px solid rgba(11,27,42,0.16);
+  background: rgba(255,255,255,0.85);
+  color: var(--textDark);
+  border-radius: 12px;
+  padding: 6px 10px;
+  cursor:pointer;
+  font-size: 18px;
+}
+
+#modalBody{
+  max-height: 65vh;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.modal-actions{
+  margin-top: 12px;
+  display:flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content:flex-end;
+}
+
+.modal-card h4{ margin: 14px 0 8px; }
+.modal-card h5{ margin: 12px 0 6px; }
+.modal-card p{ margin: 10px 0; line-height: 1.6; }
+.modal-card ul{ margin: 10px 0 0; padding-left: 18px; }
+.modal-card li{ margin: 6px 0; }
+.modal-card a{ text-decoration: underline; }
+
+/* =========================================
+   FOOTER
+   ========================================= */
+.site-footer{
+  border-top: 1px solid rgba(255,255,255,0.40);
+  padding: 18px 0;
+  background: rgba(255,255,255,0.22);
+  backdrop-filter: blur(8px);
+}
+.footer-inner{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  color: var(--textDark);
+}
+.footer-links{ display:flex; gap: 12px; flex-wrap: wrap; }
+.footer-links a{ opacity: 0.95; }
+.footer-links a:hover{ opacity: 1; }
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+@media (max-width: 900px){
+  .nav{ display:none; }
+  .nav-toggle{ display:inline-flex; }
+
+  .grid-3{ grid-template-columns: 1fr; }
+  .grid-2{ grid-template-columns: 1fr; }
+  .content-block{ grid-template-columns: 1fr; }
+
+  /* hover dropdown not useful on mobile */
+  .nav-dropdown:hover .nav-dropmenu{ display: none; }
+}
+/* =========================================
+   HOME PAGE SLIDESHOW (RESTORE)
+   ========================================= */
+.hero{
+  padding: 18px 0 10px;
+}
+
+.slideshow{
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.45);
+  box-shadow: var(--shadow);
+  background: rgba(255,255,255,0.18);
+}
+
+.slides{
+  position: relative;
+  height: 420px;
+}
+
+/* each slide sits on top of each other */
+.slide{
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: scale(1.02);
+  transition: opacity 500ms ease, transform 700ms ease;
+}
+
+/* JS toggles this */
+.slide.is-active{
+  opacity: 1;
+  transform: scale(1);
+}
+
+.slide img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* overlay text on slide */
+.slide-overlay{
+  position:absolute;
+  inset:0;
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 6px;
+  padding: 22px;
+  background: linear-gradient(180deg, transparent 35%, rgba(0,0,0,0.60) 100%);
+}
+
+.slide-kicker{
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.slide-overlay h1,
+.slide-overlay h2{
+  margin: 0;
+  line-height: 1.12;
+  font-size: clamp(1.6rem, 3.4vw, 2.6rem);
+}
+
+.slide-overlay p{
+  margin: 0;
+  max-width: 70ch;
+  opacity: 0.92;
+}
+
+/* buttons */
+.slide-btn{
+  position:absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.35);
+  background: rgba(255,255,255,0.35);
+  color: #0b1b2a;
+  font-size: 26px;
+  cursor:pointer;
+  z-index: 3;
+}
+.slide-btn:hover{ background: rgba(255,255,255,0.55); }
+.slide-btn.prev{ left: 12px; }
+.slide-btn.next{ right: 12px; }
+
+/* dots */
+.dots{
+  position:absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 12px;
+  display:flex;
+  gap: 8px;
+  z-index: 3;
+}
+.dot{
+  width: 10px; height: 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.55);
+  background: rgba(255,255,255,0.35);
+  cursor:pointer;
+}
+.dot.is-active{ background: rgba(255,255,255,0.95); }
+
+@media (max-width: 900px){
+  .slides{ height: 340px; }
+}
+/* =========================
+   ABOUT PAGE – SHORT HERO
+   Works for normal background-image hero
+========================= */
+
+.about-page .about-hero{
+  height: 260px !important;
+  min-height: 260px !important;
+  max-height: 260px !important;
+
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* Stop overlay from forcing tall hero */
+.about-page .about-hero .page-hero-overlay{
+  min-height: 0 !important;
+  height: 100% !important;
+  display: flex;
+  align-items: flex-end;      /* text sits at bottom */
+  padding: 22px 0 !important;
+}
+/* About page: 2 project cards side-by-side */
+.project-cards-grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  gap: 18px;
+  margin-top: 16px;
+}
+
+.project-card{
+  border: 1px solid rgba(255,255,255,0.55);
+  border-radius: 18px;
+  background: rgba(255,255,255,0.75);
+  padding: 16px;
+  color: #0b1b2a;
+  box-shadow: 0 14px 35px rgba(0,0,0,0.18);
+}
+
+.project-card-img{
+  width: 100%;
+  height: clamp(260px, 30vw, 480px);
+  object-fit: cover;
+  border-radius: 16px;
+  border: 2px solid rgba(255,255,255,0.7);
+  margin-bottom: 12px;
+}
+
+/* Buttons spacing */
+.project-card .btn{
+  margin-top: 10px;
+}
+
+/* Mobile: stack */
+@media (max-width: 900px){
+  .project-cards-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Home page contact + donation split */
+.glass-split{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  align-items: start;
+}
+
+/* Make both sides look like glass panels */
+.glass-split .panel{
+  background: rgba(255,255,255,0.78);
+  border: 1px solid rgba(255,255,255,0.55);
+  border-radius: 18px;
+  box-shadow: 0 14px 35px rgba(0,0,0,0.18);
+  padding: 18px;
+  color: #0b1b2a;
+}
+
+/* Responsive: stack on smaller screens */
+@media (max-width: 900px){
+  .glass-split{
+    grid-template-columns: 1fr;
+  }
+}
+/* Big wrapper around Current Projects */
+.projects-wrapper{
+  background: rgba(210, 235, 248, 0.85);   /* light blue glass */
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 26px;
+  padding: 28px 24px 30px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+  color: #0b1b2a;
+}
+
+/* Optional: tighten heading spacing */
+.projects-wrapper .section-head{
+  margin-bottom: 22px;
+}
+
+/* Mobile breathing room */
+@media (max-width: 900px){
+  .projects-wrapper{
+    padding: 20px 16px 22px;
+  }
+}
+.about-wrapper{
+  background: rgba(210, 235, 248, 0.85);   /* same light blue glass */
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 26px;
+  padding: 28px 28px 30px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+  color: #0b1b2a;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.about-cta{
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
+}
+/* CONTACT hero: force text to sit lower */
+body.contact-page .page-hero {
+  min-height: 420px; /* adjust overall hero height */
+}
+
+body.contact-page .page-hero-overlay.hero-bottom .birmingham-page .page-hero{
+  min-height: 420px;          /* must match hero height */
+  display: flex !important;
+  flex-direction: column;
+  padding: 24px 0 80px !important; /* controls how low it sits */
+}
+
+/* this is the key: push the inner container down */
+body.contact-page .page-hero-overlay.hero-bottom > .container{
+  margin-top: auto !important;
+}
+
+/* mobile tweak */
+@media (max-width: 768px){
+  body.contact-page .page-hero,
+  body.contact-page .page-hero-overlay.hero-bottom{
+    min-height: 320px;
+  }
+  body.contact-page .page-hero-overlay.hero-bottom{
+    padding-bottom: 55px !important;
+  }
+}
+
+/* CONTACT HERO: remove / lighten any dark overlay (including ::before layers) */
+body.contact-page .page-hero::before{
+  background: rgba(0,0,0,0.12) !important; /* lighter filter */
+}
+
+/* If your darkness is coming from the overlay div instead */
+body.contact-page .page-hero-overlay{
+  background: linear-gradient(
+    180deg,
+    rgba(0,0,0,0.05),
+    rgba(0,0,0,0.18)
+  ) !important;
+}
+/* ==============================
+   Google Map embed – clean + consistent
+   Works for Contact + Birmingham pages
+================================= */
+
+/* Wrapper around the iframe */
+.map-embed{
+  width: 100%;
+  margin-top: 12px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(11,27,42,0.14);
+  background: rgba(255,255,255,0.85);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.12);
+}
+
+/* Make iframe behave like a proper block */
+.map-embed iframe{
+  display: block;        /* removes that “gap” under the iframe */
+  width: 100%;
+  height: 260px;         /* tidy default height */
+  border: 0;
+}
+
+/* Slightly taller on bigger screens */
+@media (min-width: 900px){
+  .map-embed iframe{ height: 320px; }
+}
+
+/* If map is inside a panel/glass area, keep spacing consistent */
+.panel .map-embed,
+.glass-panel .map-embed{
+  margin-top: 14px;
+}
+
+/* Make the "Open in Google Maps" button sit neatly under the map */
+.map-actions{
+  margin-top: 14px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* Optional: if you want the button centered instead */
+.map-actions.center{
+  justify-content: center;
+}
+/* Birmingham hero: force text to bottom */
+.birmingham-page .page-hero{
+  position: relative;
+}
+
+.birmingham-page .page-hero-overlay{
+  min-height: unset;       /* cancels the global 320px rule */
+  height: 100%;            /* fill the hero */
+  display: flex;
+  align-items: flex-end;   /* push to bottom */
+  padding: 0 0 40px;       /* bottom space */
+}
+
+/* make sure the container isn't centering itself */
+.birmingham-page .page-hero-overlay .container{
+  width: min(1100px, 92%);
+}
+/* Force hero text to sit at the bottom (Birmingham only via .hero-bottom) */
+.hero-bottom{
+  position: relative;
+  height: 60vh;
+  min-height: 360px;
+  max-height: 650px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+/* Make overlay fill the hero so flex can push to bottom */
+.hero-bottom .page-hero-overlay{
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;      /* ✅ pushes text to bottom */
+  padding: 0 0 42px;          /* ✅ space from bottom */
+  background: none;           /* optional: removes dark gradient if you want */
+}
+
+/* keep container aligned nicely */
+.hero-bottom .page-hero-overlay .container{
+  width: min(1100px, 92%);
+}
+/* =========================
+   Details / "Bank Transfer" button styling
+   ========================= */
+.details{
+  border: 1px solid rgba(11,27,42,0.14);
+  border-radius: 16px;
+  background: rgba(255,255,255,0.55);
+  padding: 12px;
+  margin-top: 12px;
+}
+
+.details summary{
+  list-style: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.85);
+  border: 1px solid rgba(11,27,42,0.14);
+  font-weight: 800;
+  color: rgba(11,27,42,0.92);
+  user-select: none;
+}
+
+.details summary::-webkit-details-marker{ display:none; }
+
+/* nice chevron icon */
+.details summary::before{
+  content: "▸";
+  font-size: 18px;
+  line-height: 1;
+  transform: translateY(-1px);
+  transition: transform 200ms ease;
+  opacity: 0.85;
+}
+
+.details[open] summary::before{
+  transform: rotate(90deg) translateX(1px);
+}
+
+.details summary:hover{
+  background: rgba(255,255,255,0.95);
+  transform: translateY(-1px);
+}
+
+.details-body{
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(11,27,42,0.10);
+}
+
