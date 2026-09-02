@@ -4,14 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Blue Ink Trust | Education Charity Eradicating Poverty</title>
-<link rel="stylesheet" href="styles.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <meta name="description" content="Blue Ink Trust is a UK charity (no. 1136307) advancing education and tackling poverty for disadvantaged children — funding schools, school buses and community projects across India and Birmingham." />
   <link rel="canonical" href="https://www.blueinktrust.org/" />
   <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#4e3c7e" />
+  <meta name="theme-color" content="#13233f" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css" />
 
   <!-- Favicons -->
   <link rel="icon" href="favicon.ico" sizes="any" />
@@ -68,389 +69,325 @@
   }
   </script>
 </head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
 
-<body class="home-page">
-  <a class="skip-link" href="#main">Skip to content</a>
+<!-- ===================== HEADER ===================== -->
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html" aria-label="Blue Ink Trust, home">
+      <img src="Media/Blue Ink Trust Logo.png" class="brand-logo" alt="Blue Ink Trust logo">
+      <span>Blue Ink Trust<small>Registered Charity No. 1136307</small></span>
+    </a>
+    <button class="nav-toggle" aria-label="Menu" aria-controls="nav-links" aria-expanded="false"><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li class="has-sub"><a href="about.html">About</a>
+        <ul class="subnav">
+          <li><a href="about.html">About overview</a></li>
+          <li><a href="birmingham-project.html">Birmingham Project</a></li>
+          <li><a href="india-project.html">India Project</a></li>
+        </ul>
+      </li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a class="btn btn--gold nav-cta" href="contact.html">Donate</a></li>
+    </ul>
+  </div>
+</header>
 
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="logo" href="index.html" aria-label="Blue Ink Trust Home">
-        <img src="Media/Blue Ink Trust Logo.png" alt="BIT logo">
-        <span class="logo-text">Blue Ink Trust</span>
-      </a>
+<main id="main">
 
-      <nav class="nav" aria-label="Primary">
-        <a class="nav-link active" href="index.html">Home</a>
-        <a class="nav-link" href="about.html">About</a>
-        <a class="nav-link" href="projects.html">Projects</a>
-        <a class="nav-link" href="contact.html">Contact</a>
-      </nav>
-
-      <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="hamburger" aria-hidden="true"></span>
-      </button>
-    </div>
-
-    <nav id="mobile-nav" class="nav-mobile" aria-label="Mobile">
-      <a class="nav-link" href="index.html">Home</a>
-      <a class="nav-link" href="about.html">About</a>
-      <a class="nav-link" href="projects.html">Projects</a>
-      <a class="nav-link" href="contact.html">Contact</a>
-      <a class="btn btn-primary" href="contact.html">Donate / Get Involved</a>
-    </nav>
-  </header>
-
-  <main id="main">
-
-    <!-- Hero Slideshow -->
-    <section class="hero">
-      <div class="container">
-        <div class="slideshow" aria-label="Blue Ink Trust work slideshow">
-          <div class="slides" id="slides">
-
-            <div class="slide is-active">
-              <img src="Media/Banner image 1.jpg" alt="School at lunch time">
-              <div class="slide-overlay">
-                <p class="slide-kicker">Propagation • Promotion • Advancement of Education.</p>
-                <h1>Eradicating poverty through Education</h1>
-                <p>Supporting communities through practical projects that last.</p>
-              </div>
-            </div>
-
-            <div class="slide">
-              <img src="Media/Indoor assembly.jpg" alt="Inside classroom">
-              <div class="slide-overlay">
-                <p class="slide-kicker">Learning • Wellbeing • Opportunity</p>
-                <h2>Helping people thrive</h2>
-                <p>Resources, mentoring, and support where it’s needed most.</p>
-              </div>
-            </div>
-
-            <div class="slide">
-              <img src="Media/Banner image 3.jpg" alt="Students on a trip">
-              <div class="slide-overlay">
-                <p class="slide-kicker">Community • Education • Impact</p>
-                <h2>Real outcomes you can see</h2>
-                <p>Small actions. Big change.</p>
-              </div>
-            </div>
-
-          </div>
-
-          <button class="slide-btn prev" type="button" aria-label="Previous slide" id="prevSlide">‹</button>
-          <button class="slide-btn next" type="button" aria-label="Next slide" id="nextSlide">›</button>
-
-          <div class="dots" role="tablist" aria-label="Slideshow navigation">
-            <button class="dot is-active" type="button" aria-label="Go to slide 1" data-slide="0"></button>
-            <button class="dot" type="button" aria-label="Go to slide 2" data-slide="1"></button>
-            <button class="dot" type="button" aria-label="Go to slide 3" data-slide="2"></button>
-          </div>
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <div class="feature-split">
+      <div class="hero-copy fs-copy reveal">
+        <p class="eyebrow">Propagation · Promotion · Advancement of Education</p>
+        <h1>Eradicating poverty through <em>education</em>.</h1>
+        <p class="lede">Supporting communities through practical projects that last — resources, mentoring and support where it's needed most.</p>
+        <div class="btn-row">
+          <a class="btn btn--gold" href="contact.html">Support our work</a>
+          <a class="btn btn--ghost" href="projects.html">See our projects</a>
         </div>
+        <p class="reg-line"><strong>A UK registered charity.</strong> Charity No. 1136307 · Founded 2010</p>
       </div>
-    </section>
-
-    <!-- About -->
-    <section class="section">
-      <div class="container">
-        <div class="about-wrapper">
-          <h2>About Blue Ink Trust</h2>
-
-          <p>
-           We are steadfast in our conviction that every child, irrespective of background or circumstance, deserves the opportunity to thrive. Blue Ink Trust is a community-centred charitable organisation dedicated to advancing equitable access to education and cultivating meaningful opportunities for children and young people facing systemic disadvantages.
-          </p>
-
-          <div class="about-cta" style="display:flex; justify-content:center; margin-top:14px;">
-            <a href="about.html" class="btn btn-primary">Read more</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Current Projects -->
-    <section class="section">
-      <div class="container">
-        <div class="projects-wrapper">
-          <h2 class="section-head center">Current Projects</h2>
-
-          <div class="grid-3">
-
-            <button class="card clickable" type="button"
-              data-modal-title="Boarding Support – Boarding School"
-              data-modal-template="tpl-orphan-support">
-              <div class="card-media" style="background-image:url('Media/Orphan study.jpg');"></div>
-              <h3>Support the study of a boarding student</h3>
-              <p>Education, care, and a safe environment for students.</p>
-              <span class="pill">Learn more</span>
-            </button>
-
-            <button class="card clickable" type="button"
-              data-modal-title="School Bus Donation Project"
-              data-modal-template="tpl-school-bus">
-              <div class="card-media" style="background-image:url('Media/School Bus.jpg');"></div>
-              <h3>Donate towards a school bus</h3>
-              <p>A safe ride to school, opening the door to education.</p>
-              <span class="pill">Learn more</span>
-            </button>
-
-            <button class="card clickable" type="button"
-              data-modal-title="School Running Costs"
-              data-modal-template="tpl-running-costs">
-              <div class="card-media" style="background-image:url('Media/Running cost .jpg');"></div>
-              <h3>Donate towards the running cost of the school</h3>
-              <p>Helping cover essential daily costs to keep the school running.</p>
-              <span class="pill">Learn more</span>
-            </button>
-
-          </div>
-
-          <div class="center" style="margin-top:18px;">
-            <a href="projects.html" class="btn btn-primary">See All Ongoing Projects</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact + Donation -->
-    <section class="section">
-      <div class="container">
-        <div class="split-2 glass-split">
-
-          <div class="panel">
-<h4>Contact details</h4>
-              <ul class="nice-list">
-                <li><strong>Email:</strong> <a href="mailto:info@blueinktrust.org">info@blueinktrust.org</a></li>
-                <li><strong>Mobile / WhatsApp:</strong> <a href="tel:07817237765">07817 237765</a></li>
-         </ul>
-<h2>Write to us</h2>
-
-  <p>
-    <strong>Blue Ink Trust</strong><br>
-    46 Yarnfield Rd<br>
-    Tyseley<br>
-    Birmingham B11 3PG
-  </p>
-
-  
-          </div>
-
-          <div class="panel">
-            <h2>Donation Information</h2>
-            <p class="muted">You can support our work through bank transfer or online donation.</p>
-
-            <!-- NOTE: details must be <details> not <div> -->
-            <details class="details">
-              <summary><strong>Bank Transfer Details</strong></summary>
-              <div class="details-body">
-                <p>
-                  <strong>Account Name:</strong> Blue Ink Trust<br>
-                  <strong>Sort Code:</strong> 30-00-03<br>
-                  <strong>Account Number:</strong> 00459710<br>
-                  <strong>Reference:</strong> Your name + project
-                </p>
-              </div>
-            </details>
-
-            <div class="donation-actions">
-              <a class="btn btn-primary"
-                 href="https://www.justgiving.com/charity/blueinktrust"
-                 target="_blank" rel="noopener">
-                Donate via JustGiving
-              </a>
-
-              <a class="btn btn-ghost" href="contact.html">Go to Contact Page</a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ======================
-         ONE Modal (ONLY)
-         ====================== -->
-    <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-label="Project details">
-      <div class="modal-card" role="document">
-        <button class="modal-close" type="button" data-close="true" aria-label="Close">×</button>
-        <h3 id="modalTitle">Title</h3>
-        <div id="modalBody"></div>
-
-        <div class="modal-actions">
-          <a class="btn btn-primary" id="modalLink" href="contact.html">Support this project</a>
-          <button class="btn" type="button" data-close="true">Close</button>
+      <div class="fs-media reveal">
+        <div class="slideshow">
+          <div class="slide active"><img src="Media/Banner image 1.jpg" alt="School at lunch time"></div>
+          <div class="slide"><img src="Media/Indoor assembly.jpg" alt="Inside the classroom"></div>
+          <div class="slide"><img src="Media/Banner image 3.jpg" alt="Students on a trip"></div>
+          <button class="ss-arrow prev" aria-label="Previous slide">&#8249;</button>
+          <button class="ss-arrow next" aria-label="Next slide">&#8250;</button>
+          <div class="ss-dots"></div>
         </div>
       </div>
     </div>
+  </section>
 
+  <!-- ===================== BELIEF ===================== -->
+  <section class="section">
+    <div class="container center reveal">
+      <p class="eyebrow" style="justify-content:center;">Our belief</p>
+      <p class="measure center" style="font-family:var(--f-display); font-size:clamp(1.4rem,1.1rem + 1.4vw,2.1rem); line-height:1.35; color:var(--ink);">
+        Every child, irrespective of background or circumstance, deserves the opportunity to thrive.
+      </p>
+    </div>
+  </section>
 
-
-    <template id="tpl-school-bus">
-      <div class="modal-banner" data-slideshow>
-        <img src="Media/School Bus.jpg" class="mini-slide active" alt="School transport support">
-        <img src="Media/School Bus 2 .jpg" class="mini-slide" alt="Children arriving safely to school">
+  <!-- ===================== ABOUT ===================== -->
+  <section class="section section--paper2">
+    <div class="container split">
+      <div class="split-copy reveal">
+        <p class="eyebrow">About us</p>
+        <h2>About Blue Ink Trust</h2>
+        <p>We are steadfast in our conviction that every child, irrespective of background or circumstance, deserves the opportunity to thrive. Blue Ink Trust is a community-centred charitable organisation dedicated to advancing equitable access to education and cultivating meaningful opportunities for children and young people facing systemic disadvantages.</p>
+        <a class="btn btn--ink" href="about.html">Read more</a>
       </div>
-
-      <p>
-  A dedicated school bus helps children reach school safely and consistently—especially those who travel long distances or face unsafe routes.
-  Reliable transport improves attendance, punctuality, and overall learning outcomes.
-</p>
-
-<p>
-  By adding <strong>two additional buses</strong>, we aim to reach more villages and help many more children access education.
-  A <strong>53-seater bus costs £33,000</strong>.
-</p>
-
-<h4>How you can support</h4>
-<ul>
-  <li><strong>£625</strong> – Helps sponsor a seat towards a school bus</li>
-  
-</ul>
-
-<h4>How to donate</h4>
-
-<h5>1. Bank transfer</h5>
-<p>
-  <strong>Account Name:</strong> Blue Ink Trust<br>
-  <strong>Sort Code:</strong> 30-00-03<br>
-  <strong>Account Number:</strong> 00459710<br>
-  <strong>Reference:</strong> Your name – School Bus
-</p>
-
-<h5>2. Donate via JustGiving</h5>
-<p>
-  <a href="https://www.justgiving.com/charity/blueinktrust" target="_blank" rel="noopener">
-    Donate via JustGiving
-  </a>
-  <br><strong>Reference:</strong> School Bus
-</p>
-
-<h4>Receipts and donation updates</h4>
-<p>
-  If you would like a receipt or wish to receive updates about your donation, please send your
-  <strong>payment reference and amount</strong>:
-</p>
-<ul>
-  <li>Email: <a href="mailto:info@blueinktrust.org">info@blueinktrust.org</a></li>
-  <li>WhatsApp / Mobile: <a href="tel:07817237765">07817 237765</a></li>
-</ul>    </template>
-
-    <template id="tpl-orphan-support">
- <div class="modal-banner" data-slideshow>
-        <img src="Media/orphan-1.jpg" class="mini-slide active" alt="Students studying in boarding school">
-        <img src="Media/orphan-2.jpg" class="mini-slide" alt="Boarding care and learning environment">
+      <div class="split-media reveal">
+        <img class="media ratio-4x3" src="Media/About India.jpg" alt="Blue Ink Trust education work">
       </div>
-<p>
-  
-  For just <strong>£300 per year</strong>, you can help provide an uninterrupted,
-  high-quality education for a student—supported academically, emotionally, and practically
-  from the moment they join us and even after they leave.
-</p>
+    </div>
+  </section>
 
-<p>
-  Our boarding facility is designed to support students from different districts and states, giving them the opportunity to learn, grow, and
-  become a <strong>beacon of hope</strong> for their families and communities.
-</p>
+  <!-- ===================== CURRENT PROJECTS ===================== -->
+  <section class="section">
+    <div class="container">
+      <div class="center reveal" style="margin-bottom:2.5rem;">
+        <p class="eyebrow" style="justify-content:center;">On the ground</p>
+        <h2>Current projects</h2>
+      </div>
+      <div class="grid grid-3">
 
-<h4>What £300 covers</h4>
-<ul>
-  <li>Accommodation and living expenses</li>
-  <li>Nutritious daily meals</li>
-  <li>Clothing and basic necessities</li>
-  <li>Tuition fees</li>
-  <li>School supplies and learning materials</li>
-  <li>Travel to and from the child’s village</li>
-</ul>
+        <button class="pcard clickable reveal" type="button"
+          data-modal-title="Boarding Support – Boarding School"
+          data-modal-template="tpl-orphan-support">
+          <img class="media" src="Media/Orphan study.jpg" alt="Boarding student studying">
+          <div class="pcard-body">
+            <h3>Support the study of a boarding student</h3>
+            <p>Education, care, and a safe environment for students.</p>
+            <div class="pcard-foot"><span class="tag tag--education">Learn more →</span></div>
+          </div>
+        </button>
 
-<h4>How to donate</h4>
+        <button class="pcard clickable reveal" type="button"
+          data-modal-title="School Bus Donation Project"
+          data-modal-template="tpl-school-bus">
+          <img class="media" src="Media/School Bus.jpg" alt="School bus">
+          <div class="pcard-body">
+            <h3>Donate towards a school bus</h3>
+            <p>A safe ride to school, opening the door to education.</p>
+            <div class="pcard-foot"><span class="tag tag--access">Learn more →</span></div>
+          </div>
+        </button>
 
-<h5>1. Bank transfer</h5>
-<p>
-  <strong>Account Name:</strong> Blue Ink Trust<br>
-  <strong>Sort Code:</strong> 30-00-03<br>
-  <strong>Account Number:</strong> 00459710<br>
-  <strong>Reference:</strong> Your name – Boarding Student
-</p>
+        <button class="pcard clickable reveal" type="button"
+          data-modal-title="School Running Costs"
+          data-modal-template="tpl-running-costs">
+          <img class="media" src="Media/Running cost .jpg" alt="Students at school">
+          <div class="pcard-body">
+            <h3>Donate towards the running cost of the school</h3>
+            <p>Helping cover essential daily costs to keep the school running.</p>
+            <div class="pcard-foot"><span class="tag tag--education">Learn more →</span></div>
+          </div>
+        </button>
 
-<h5>2. Donate via JustGiving</h5>
-<p>
-  <a href="https://www.justgiving.com/charity/blueinktrust" target="_blank" rel="noopener">
-    Donate via JustGiving
-  </a>
-  <br><strong>Reference:</strong> Boarding Student
-</p>
+      </div>
+      <div class="center" style="margin-top:2rem;">
+        <a href="projects.html" class="btn btn--ink">See all ongoing projects</a>
+      </div>
+    </div>
+  </section>
 
-<h4>Receipts and donation updates</h4>
-<p>
-  If you would like a receipt or wish to receive updates about your donation, please send your
-  <strong>payment reference and amount</strong>:
-</p>
-<ul>
-  <li>Email: <a href="mailto:info@blueinktrust.org">info@blueinktrust.org</a></li>
-  <li>WhatsApp / Mobile: <a href="tel:07817237765">07817 237765</a></li>
-</ul>
-    </template>
+  <!-- ===================== CONTACT + DONATION ===================== -->
+  <section class="section section--paper2">
+    <div class="container">
+      <div class="reveal measure" style="margin-bottom:2rem;">
+        <p class="eyebrow">Get in touch</p>
+        <h2>Contact &amp; donations</h2>
+        <p>You can support our work through bank transfer or online donation, or reach us directly with any questions.</p>
+      </div>
+      <div class="grid grid-2">
+        <div class="bank-box reveal">
+          <h3>Contact details</h3>
+          <ul class="info-list" style="margin-top:1rem;">
+            <li><div class="k">Email</div><div class="v"><a href="mailto:info@blueinktrust.org">info@blueinktrust.org</a></div></li>
+            <li><div class="k">Mobile / WhatsApp</div><div class="v"><a href="tel:07817237765">07817 237765</a></div></li>
+            <li><div class="k">Address</div><div class="v">Blue Ink Trust<br>46 Yarnfield Rd, Tyseley,<br>Birmingham B11 3PG</div></li>
+          </ul>
+        </div>
+        <div class="bank-box reveal">
+          <h3>Donation information</h3>
+          <p class="bank-ref">You can support our work through bank transfer or online donation.</p>
+          <details class="details">
+            <summary><strong>Bank transfer details</strong></summary>
+            <div class="details-body">
+              <dl class="bank-table">
+                <dt>Account name</dt><dd>Blue Ink Trust</dd>
+                <dt>Sort code</dt><dd>30-00-03</dd>
+                <dt>Account number</dt><dd>00459710</dd>
+                <dt>Reference</dt><dd>Your name + project</dd>
+              </dl>
+            </div>
+          </details>
+          <div class="btn-row" style="margin-top:.5rem;">
+            <a class="btn btn--gold" href="https://www.justgiving.com/charity/blueinktrust" target="_blank" rel="noopener">Donate via JustGiving</a>
+            <a class="btn btn--ghost" href="contact.html">Go to contact page</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <template id="tpl-running-costs">
-<div class="modal-banner" data-slideshow>
-    <img src="Media/student-education-1.jpg" class="mini-slide active" alt="Students at school">
-    <img src="Media/student-education-2.jpg" class="mini-slide" alt="School support resources">
+  <!-- ===================== CTA ===================== -->
+  <section class="section section--tight">
+    <div class="container">
+      <div class="cta-band reveal">
+        <h2>Be part of the change</h2>
+        <p>Your gift keeps a child in class, provides a safe ride to school, and helps build schools that will stand for generations.</p>
+        <div class="btn-row">
+          <a class="btn btn--gold" href="https://www.justgiving.com/charity/blueinktrust" target="_blank" rel="noopener">Donate now</a>
+          <a class="btn btn--ghost" href="contact.html">Other ways to help</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROJECT MODAL ===================== -->
+  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-label="Project details">
+    <div class="modal-card" role="document">
+      <button class="modal-close" type="button" data-close="true" aria-label="Close">×</button>
+      <h3 id="modalTitle">Title</h3>
+      <div id="modalBody"></div>
+      <div class="modal-actions">
+        <a class="btn btn--gold" id="modalLink" href="contact.html">Support this project</a>
+        <button class="btn btn--ghost" type="button" data-close="true">Close</button>
+      </div>
+    </div>
   </div>
 
-  <p>
-The school is located in a highly deprived area where many families struggle to afford basic necessities, let alone thinking of sending their children to school. We urge you to join hands in breaking down the barriers to education.
-  </p>
-
-  <h4>With £125 per year, one student can receive</h4>
-  <ul>
-    <li>School uniform</li>
-    <li>Travel to and from their village via the school bus</li>
-    <li>Tuition fees covered (teacher salary and essential costs such as electricity)</li>
-    <li>School supplies (bag, pencil case, pens, textbooks, exercise books)</li>
-    <li>Lunch provided at school</li>
-  </ul>
-
-  <h4>How to donate</h4>
-  <h5>1. Bank transfer</h5>
-  <p>
-    <strong>Account Name:</strong> Blue Ink Trust<br>
-    <strong>Sort Code:</strong> 30-00-03<br>
-    <strong>Account Number:</strong> 00459710<br>
-    <strong>Reference:</strong> Your name – Student’s Education
-  </p>
-
-  <h5>2. Donate via JustGiving</h5>
-  <p>
-    <a href="https://www.justgiving.com/charity/blueinktrust" target="_blank" rel="noopener">Donate via JustGiving</a>
-    <br><strong>Reference:</strong> Student’s Education
-  </p>
-
-  <h4>Receipts and donation updates</h4>
-  <p>
-    If you would like a receipt or wish to receive updates about your donation, please send your
-    <strong>payment reference and amount</strong>:
-  </p>
-  <ul>
-    <li>Email: <a href="mailto:info@blueinktrust.org">info@blueinktrust.org</a></li>
-    <li>WhatsApp / Mobile: <a href="tel:07817237765">07817 237765</a></li>
-  </ul>
-    </template>
-
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> Blue Ink Trust LTD</p>
-      <p>Charity No: 1136307</p>
-
-      <div class="footer-links">
-        <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
-      </div>
+  <template id="tpl-school-bus">
+    <div class="modal-banner" data-slideshow>
+      <img src="Media/School Bus.jpg" class="mini-slide active" alt="School transport support">
+      <img src="Media/School Bus 2 .jpg" class="mini-slide" alt="Children arriving safely to school">
     </div>
-  </footer>
+    <p>A dedicated school bus helps children reach school safely and consistently—especially those who travel long distances or face unsafe routes. Reliable transport improves attendance, punctuality, and overall learning outcomes.</p>
+    <p>By adding <strong>two additional buses</strong>, we aim to reach more villages and help many more children access education. A <strong>53-seater bus costs £33,000</strong>.</p>
+    <h4>How you can support</h4>
+    <ul><li><strong>£625</strong> – Helps sponsor a seat towards a school bus</li></ul>
+    <h4>How to donate</h4>
+    <h5>1. Bank transfer</h5>
+    <p><strong>Account Name:</strong> Blue Ink Trust<br><strong>Sort Code:</strong> 30-00-03<br><strong>Account Number:</strong> 00459710<br><strong>Reference:</strong> Your name – School Bus</p>
+    <h5>2. Donate via JustGiving</h5>
+    <p><a href="https://www.justgiving.com/charity/blueinktrust" target="_blank" rel="noopener">Donate via JustGiving</a><br><strong>Reference:</strong> School Bus</p>
+    <h4>Receipts and donation updates</h4>
+    <p>If you would like a receipt or wish to receive updates about your donation, please send your <strong>payment reference and amount</strong>:</p>
+    <ul>
+      <li>Email: <a href="mailto:info@blueinktrust.org">info@blueinktrust.org</a></li>
+      <li>WhatsApp / Mobile: <a href="tel:07817237765">07817 237765</a></li>
+    </ul>
+  </template>
 
-  <script src="main.js"></script>
+  <template id="tpl-orphan-support">
+    <div class="modal-banner" data-slideshow>
+      <img src="Media/orphan-1.jpg" class="mini-slide active" alt="Students studying in boarding school">
+      <img src="Media/orphan-2.jpg" class="mini-slide" alt="Boarding care and learning environment">
+    </div>
+    <p>For just <strong>£300 per year</strong>, you can help provide an uninterrupted, high-quality education for a student—supported academically, emotionally, and practically from the moment they join us and even after they leave.</p>
+    <p>Our boarding facility is designed to support students from different districts and states, giving them the opportunity to learn, grow, and become a <strong>beacon of hope</strong> for their families and communities.</p>
+    <h4>What £300 covers</h4>
+    <ul>
+      <li>Accommodation and living expenses</li>
+      <li>Nutritious daily meals</li>
+      <li>Clothing and basic necessities</li>
+      <li>Tuition fees</li>
+      <li>School supplies and learning materials</li>
+      <li>Travel to and from the child's village</li>
+    </ul>
+    <h4>How to donate</h4>
+    <h5>1. Bank transfer</h5>
+    <p><strong>Account Name:</strong> Blue Ink Trust<br><strong>Sort Code:</strong> 30-00-03<br><strong>Account Number:</strong> 00459710<br><strong>Reference:</strong> Your name – Boarding Student</p>
+    <h5>2. Donate via JustGiving</h5>
+    <p><a href="https://www.justgiving.com/charity/blueinktrust" target="_blank" rel="noopener">Donate via JustGiving</a><br><strong>Reference:</strong> Boarding Student</p>
+    <h4>Receipts and donation updates</h4>
+    <p>If you would like a receipt or wish to receive updates about your donation, please send your <strong>payment reference and amount</strong>:</p>
+    <ul>
+      <li>Email: <a href="mailto:info@blueinktrust.org">info@blueinktrust.org</a></li>
+      <li>WhatsApp / Mobile: <a href="tel:07817237765">07817 237765</a></li>
+    </ul>
+  </template>
+
+  <template id="tpl-running-costs">
+    <div class="modal-banner" data-slideshow>
+      <img src="Media/student-education-1.jpg" class="mini-slide active" alt="Students at school">
+      <img src="Media/student-education-2.jpg" class="mini-slide" alt="School support resources">
+    </div>
+    <p>The school is located in a highly deprived area where many families struggle to afford basic necessities, let alone thinking of sending their children to school. We urge you to join hands in breaking down the barriers to education.</p>
+    <h4>With £125 per year, one student can receive</h4>
+    <ul>
+      <li>School uniform</li>
+      <li>Travel to and from their village via the school bus</li>
+      <li>Tuition fees covered (teacher salary and essential costs such as electricity)</li>
+      <li>School supplies (bag, pencil case, pens, textbooks, exercise books)</li>
+      <li>Lunch provided at school</li>
+    </ul>
+    <h4>How to donate</h4>
+    <h5>1. Bank transfer</h5>
+    <p><strong>Account Name:</strong> Blue Ink Trust<br><strong>Sort Code:</strong> 30-00-03<br><strong>Account Number:</strong> 00459710<br><strong>Reference:</strong> Your name – Student's Education</p>
+    <h5>2. Donate via JustGiving</h5>
+    <p><a href="https://www.justgiving.com/charity/blueinktrust" target="_blank" rel="noopener">Donate via JustGiving</a><br><strong>Reference:</strong> Student's Education</p>
+    <h4>Receipts and donation updates</h4>
+    <p>If you would like a receipt or wish to receive updates about your donation, please send your <strong>payment reference and amount</strong>:</p>
+    <ul>
+      <li>Email: <a href="mailto:info@blueinktrust.org">info@blueinktrust.org</a></li>
+      <li>WhatsApp / Mobile: <a href="tel:07817237765">07817 237765</a></li>
+    </ul>
+  </template>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="brand" href="index.html">
+        <svg class="nib-mini" viewBox="0 0 40 50" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="26" height="32"><path class="nib-body" d="M20 47 C 17 41 11 35 9 27 C 7 20 9 12 15 8 C 18 6 22 6 25 8 C 31 12 33 20 31 27 C 29 35 23 41 20 47 Z"/><circle class="nib-cut" cx="20" cy="16" r="3.4"/><line class="nib-slit" x1="20" y1="20" x2="20" y2="44"/></svg>
+        <span>Blue Ink Trust</span>
+      </a>
+      <p>Eradicating poverty through education — funding schools, transport and community projects across India and Birmingham. UK registered charity no. 1136307.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <ul class="footer-links">
+        <li><a href="about.html">About us</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="birmingham-project.html">Birmingham Project</a></li>
+        <li><a href="india-project.html">India Project</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Support</h4>
+      <ul class="footer-links">
+        <li><a href="contact.html">Donate</a></li>
+        <li><a href="https://www.justgiving.com/charity/blueinktrust" target="_blank" rel="noopener">JustGiving</a></li>
+        <li><a href="projects.html">Ongoing projects</a></li>
+        <li><a href="contact.html">Contact us</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Get in touch</h4>
+      <ul class="footer-links">
+        <li><a href="mailto:info@blueinktrust.org">info@blueinktrust.org</a></li>
+        <li><a href="tel:07817237765">07817 237765</a> (WhatsApp)</li>
+        <li>46 Yarnfield Rd, Tyseley,<br>Birmingham B11 3PG</li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© <span id="year">2025</span> Blue Ink Trust LTD · Registered Charity No. 1136307</span>
+    <span class="tagline">Eradicating poverty through education</span>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
 </body>
 </html>
