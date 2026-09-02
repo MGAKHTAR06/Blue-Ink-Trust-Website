@@ -4,180 +4,190 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Birmingham Project | Blue Ink Trust</title>
-  <link rel="stylesheet" href="styles.css" />
-  <meta name="description" content="Blue Ink Trust's Birmingham project supports local children and families through education, literacy, numeracy and community programmes. Learn more and get involved." />
+  <meta name="description" content="Blue Ink Trust's Birmingham Project is a weekly supplementary school helping students bridge learning gaps in English, maths, science and reasoning — Saturdays and selected evenings in Acocks Green." />
   <link rel="canonical" href="https://www.blueinktrust.org/birmingham-project.html" />
   <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#4e3c7e" />
+  <meta name="theme-color" content="#13233f" />
 
-  <!-- Favicons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
   <link rel="icon" href="favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="32x32" href="Media/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="Media/favicon-16.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="Media/favicon-180.png" />
   <link rel="manifest" href="site.webmanifest" />
 
-  <!-- Open Graph / social sharing -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Blue Ink Trust" />
   <meta property="og:title" content="Birmingham Project | Blue Ink Trust" />
-  <meta property="og:description" content="Blue Ink Trust's Birmingham project supports local children and families through education, literacy, numeracy and community programmes. Learn more and get involved." />
+  <meta property="og:description" content="A weekly supplementary school helping students in Birmingham bridge learning gaps and reach their full potential." />
   <meta property="og:url" content="https://www.blueinktrust.org/birmingham-project.html" />
   <meta property="og:image" content="https://www.blueinktrust.org/Media/og-image.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
   <meta property="og:locale" content="en_GB" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Birmingham Project | Blue Ink Trust" />
-  <meta name="twitter:description" content="Blue Ink Trust's Birmingham project supports local children and families through education, literacy, numeracy and community programmes. Learn more and get involved." />
-  <meta name="twitter:image" content="https://www.blueinktrust.org/Media/og-image.png" />
 </head>
-<body class="birmingham-page">
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
 
-
-<!-- Use the SAME header as above (copy/paste from about.html) -->
 <header class="site-header">
-  <div class="container header-inner">
-    <a class="logo" href="index.html" aria-label="Blue Ink Trust Home">
-        <img src="Media/Blue Ink Trust Logo.png" alt="BIT logo">
-      <span class="logo-text">Blue Ink Trust</span>
+  <div class="container nav">
+    <a class="brand" href="index.html" aria-label="Blue Ink Trust, home">
+      <img src="Media/Blue Ink Trust Logo.png" class="brand-logo" alt="Blue Ink Trust logo">
+      <span>Blue Ink Trust<small>Registered Charity No. 1136307</small></span>
     </a>
-
-    <nav class="nav" aria-label="Primary">
-      <a class="nav-link" href="index.html">Home</a>
-
-      <div class="nav-dropdown">
-        <button class="nav-link nav-dropbtn active" type="button" aria-haspopup="true" aria-expanded="false">
-          About ▾
-        </button>
-        <div class="nav-dropmenu" role="menu">
-          <a class="nav-link" href="about.html" role="menuitem">About Overview</a>
-          <a class="nav-link" href="birmingham-project.html" role="menuitem">Birmingham Project</a>
-          <a class="nav-link" href="india-project.html" role="menuitem">India Project</a>
-        </div>
-      </div>
-
-      <a class="nav-link" href="projects.html">Projects</a>
-      <a class="nav-link" href="contact.html">Contact</a>
-    </nav>
-
-    <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="hamburger" aria-hidden="true"></span>
-    </button>
+    <button class="nav-toggle" aria-label="Menu" aria-controls="nav-links" aria-expanded="false"><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="has-sub"><a href="about.html">About</a>
+        <ul class="subnav">
+          <li><a href="about.html">About overview</a></li>
+          <li><a href="birmingham-project.html" aria-current="page">Birmingham Project</a></li>
+          <li><a href="india-project.html">India Project</a></li>
+        </ul>
+      </li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a class="btn btn--gold nav-cta" href="contact.html">Donate</a></li>
+    </ul>
   </div>
-
-  <nav id="mobile-nav" class="nav-mobile" aria-label="Mobile">
-    <a class="nav-link" href="index.html">Home</a>
-    <details class="mobile-drop">
-      <summary class="nav-link">About</summary>
-      <div class="mobile-drop-links">
-        <a class="nav-link" href="about.html">About Overview</a>
-        <a class="nav-link" href="birmingham-project.html">Birmingham Project</a>
-        <a class="nav-link" href="india-project.html">India Project</a>
-      </div>
-    </details>
-    <a class="nav-link" href="projects.html">Projects</a>
-    <a class="nav-link" href="contact.html">Contact</a>
-    <a class="btn btn-primary" href="contact.html">Donate / Get Involved</a>
-  </nav>
 </header>
 
 <main id="main">
-  <!-- Picture banner -->
-<section class="page-hero hero-bottom" style="background-image:url('Media/About Birmingham.jpg');">
-  <div class="page-hero-overlay">
-    <div class="container">
-      <h1>Birmingham Project</h1>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container page-hero-grid">
+      <div class="page-hero-copy">
+        <p class="breadcrumb"><a href="index.html">Home</a> · <a href="about.html">About</a> · Birmingham Project</p>
+        <h1>Birmingham Project</h1>
         <p>A Saturday supplementary school supporting students in Birmingham to bridge learning gaps and reach their full potential.</p>
       </div>
-    </div>
-  </section>
-
-  <!-- Text banner -->
-  <section class="text-banner">
-    <div class="container text-banner-inner">
-      <strong>Reducing educational inequality and helpping students build strong foundations for their future.</strong> 
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="glass-panel">
-        <h2>What we do in Birmingham</h2>
-
-        <!-- Embedded image into text (text left, image right) -->
-        <section class="content-block">
-          <div class="content-text">
-            <p>
-Blue Ink Trust delivers a weekly supplementary education programme in Birmingham, operating every Saturday and on selected weekday evenings. The programme is specifically designed to support students who may be at risk of academic underachievement, while also enabling all learners within our provision to realise their full potential. The initiative is centred on narrowing attainment gaps, strengthening core academic competencies, and fostering confidence within a nurturing and inclusive learning environment.
-            </p>
-            <p>
-The supplementary school provides structured instruction across the following areas:		<ul>
-			<li>English and English grammar</li>
-			<li>Mathematics</li>
-			<li>Science</li>
-			<li>Verbal and non-verbal reasoning</li>
-		</ul>
-            </p>
-	<p><strong>When and where</strong></p>
-<p>
-Sessions take place every Saturday from 10:00am to 2:00pm, alongside evening sessions offering extended learning opportunities. Additional programmes are delivered during school holidays, with enhanced timetables to provide continued academic engagement. These holiday provisions are intentionally designed to ensure that children and young people who may otherwise lack access to educational trips or enrichment activities can participate in a safe, structured, and intellectually stimulating environment.
-</p>
-<p>
-<section class="panel">
-<p><strong>For more information please contact Mr. Akhtar on 07817237765</strong></p>
-
-  <h3>Location</h3>
-  <p>
-    Acocks Green Methodist Church, 1 Botteville Road, Acocks Green, Birmingham, B27 7YE
-  </p>
-
-  <div class="map-embed" aria-label="Map showing Acocks Green Methodist Church">
-    <iframe
-      title="Acocks Green Methodist Church Map"
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-      src="https://www.google.com/maps?q=Acocks%20Green%20Methodist%20Church%201%20Botteville%20Road%20Acocks%20Green%20Birmingham%20B27%207YE&output=embed">
-    </iframe>
-  </div>
-
-  <p style="margin-top:10px;">
-    <a class="btn btn-primary" target="_blank" rel="noopener"
-       href="https://www.google.com/maps?q=Acocks%20Green%20Methodist%20Church%201%20Botteville%20Road%20Acocks%20Green%20Birmingham%20B27%207YE">
-      Open in Google Maps
-    </a>
-  </p>
-</section>
-
-          </div>
-
-          <div class="content-media">
-            <img src="Media/About birmingham 1.png" alt="Birmingham community support work">
-          </div>
-        </section>
-
-
-        <div class="center" style="margin-top:14px;">
-                </div>
+      <div class="page-hero-media reveal">
+        <img class="media ratio-wide" src="Media/About Birmingham.jpg" alt="Birmingham supplementary school">
       </div>
     </div>
   </section>
+
+  <!-- TEXT BANNER -->
+  <section class="text-banner">
+    <div class="container">
+      <strong>Reducing educational inequality and helping students build strong foundations for their future.</strong>
+    </div>
+  </section>
+
+  <!-- WHAT WE DO -->
+  <section class="section">
+    <div class="container">
+      <div class="reveal measure" style="margin-bottom:1rem;">
+        <p class="eyebrow">In the UK</p>
+        <h2>What we do in Birmingham</h2>
+      </div>
+
+      <section class="content-block reveal">
+        <div class="content-text">
+          <p>Blue Ink Trust delivers a weekly supplementary education programme in Birmingham, operating every Saturday and on selected weekday evenings. The programme is specifically designed to support students who may be at risk of academic underachievement, while also enabling all learners within our provision to realise their full potential. The initiative is centred on narrowing attainment gaps, strengthening core academic competencies, and fostering confidence within a nurturing and inclusive learning environment.</p>
+          <p>The supplementary school provides structured instruction across the following areas:</p>
+          <ul class="leaf-list">
+            <li>English and English grammar</li>
+            <li>Mathematics</li>
+            <li>Science</li>
+            <li>Verbal and non-verbal reasoning</li>
+          </ul>
+        </div>
+        <div class="content-media">
+          <img class="media ratio-4x3" src="Media/About birmingham 1.png" alt="Birmingham community support work">
+        </div>
+      </section>
+
+      <hr class="soft-rule">
+
+      <div class="split" style="align-items:start;">
+        <div class="reveal">
+          <h3>When and where</h3>
+          <p>Sessions take place every Saturday from 10:00am to 2:00pm, alongside evening sessions offering extended learning opportunities. Additional programmes are delivered during school holidays, with enhanced timetables to provide continued academic engagement. These holiday provisions are intentionally designed to ensure that children and young people who may otherwise lack access to educational trips or enrichment activities can participate in a safe, structured, and intellectually stimulating environment.</p>
+          <p><strong>For more information please contact Mr. Akhtar on <a href="tel:07817237765">07817 237765</a>.</strong></p>
+          <h4 style="margin-top:1.25rem;">Location</h4>
+          <p>Acocks Green Methodist Church, 1 Botteville Road, Acocks Green, Birmingham, B27 7YE</p>
+          <a class="btn btn--ink" target="_blank" rel="noopener"
+             href="https://www.google.com/maps?q=Acocks%20Green%20Methodist%20Church%201%20Botteville%20Road%20Acocks%20Green%20Birmingham%20B27%207YE">
+            Open in Google Maps
+          </a>
+        </div>
+        <div class="reveal">
+          <div class="map-embed" aria-label="Map showing Acocks Green Methodist Church">
+            <iframe
+              title="Acocks Green Methodist Church Map"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=Acocks%20Green%20Methodist%20Church%201%20Botteville%20Road%20Acocks%20Green%20Birmingham%20B27%207YE&output=embed">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section--tight">
+    <div class="container">
+      <div class="cta-band reveal">
+        <h2>Support learning closer to home</h2>
+        <p>Help us keep bridging learning gaps for students across Birmingham.</p>
+        <div class="btn-row">
+          <a class="btn btn--gold" href="contact.html">Get involved</a>
+          <a class="btn btn--ghost" href="projects.html">See all projects</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <footer class="site-footer">
-  <div class="container footer-inner">
-    <p>© <span id="year"></span> Blue Ink Trust</p>
-      <p>Charity No: 1136307</p>
-
-    <div class="footer-links">
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="brand" href="index.html">
+        <svg class="nib-mini" viewBox="0 0 40 50" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="26" height="32"><path class="nib-body" d="M20 47 C 17 41 11 35 9 27 C 7 20 9 12 15 8 C 18 6 22 6 25 8 C 31 12 33 20 31 27 C 29 35 23 41 20 47 Z"/><circle class="nib-cut" cx="20" cy="16" r="3.4"/><line class="nib-slit" x1="20" y1="20" x2="20" y2="44"/></svg>
+        <span>Blue Ink Trust</span>
+      </a>
+      <p>Eradicating poverty through education — funding schools, transport and community projects across India and Birmingham. UK registered charity no. 1136307.</p>
     </div>
+    <div>
+      <h4>Explore</h4>
+      <ul class="footer-links">
+        <li><a href="about.html">About us</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="birmingham-project.html">Birmingham Project</a></li>
+        <li><a href="india-project.html">India Project</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Support</h4>
+      <ul class="footer-links">
+        <li><a href="contact.html">Donate</a></li>
+        <li><a href="https://www.justgiving.com/charity/blueinktrust" target="_blank" rel="noopener">JustGiving</a></li>
+        <li><a href="projects.html">Ongoing projects</a></li>
+        <li><a href="contact.html">Contact us</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Get in touch</h4>
+      <ul class="footer-links">
+        <li><a href="mailto:info@blueinktrust.org">info@blueinktrust.org</a></li>
+        <li><a href="tel:07817237765">07817 237765</a> (WhatsApp)</li>
+        <li>46 Yarnfield Rd, Tyseley,<br>Birmingham B11 3PG</li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© <span id="year">2025</span> Blue Ink Trust LTD · Registered Charity No. 1136307</span>
+    <span class="tagline">Eradicating poverty through education</span>
   </div>
 </footer>
 
-<script src="main.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
