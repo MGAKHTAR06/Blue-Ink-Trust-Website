@@ -1,226 +1,152 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // --------------------
-  // Footer year
-  // --------------------
-  const yearEl = document.getElementById("year");
-  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+/* Blue Ink Trust — shared behaviour
+   (adapted from the Zaitoon house scripts, with the project modal system) */
+(function () {
+  "use strict";
 
-  // --------------------
-  // Mobile nav
-  // --------------------
-  const navToggle = document.querySelector(".nav-toggle");
-  const mobileNav = document.getElementById("mobile-nav");
-
-  if (navToggle && mobileNav) {
-    navToggle.addEventListener("click", () => {
-      const isOpen = mobileNav.classList.toggle("open");
-      navToggle.setAttribute("aria-expanded", String(isOpen));
+  // ---------- Mobile nav toggle ----------
+  var toggle = document.querySelector(".nav-toggle");
+  var links = document.getElementById("nav-links");
+  if (toggle && links) {
+    toggle.addEventListener("click", function () {
+      var open = links.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    links.addEventListener("click", function (e) {
+      // don't collapse when opening the About sub-menu parent on mobile
+      if (e.target.tagName === "A" && links.classList.contains("open")) {
+        links.classList.remove("open");
+        toggle.setAttribute("aria-expanded", "false");
+      }
     });
   }
 
-  // --------------------
-  // HERO slideshow (behind banner text)
-  // --------------------
-  document.querySelectorAll("[data-hero-slideshow]").forEach((slideshow) => {
-    const slides = Array.from(slideshow.querySelectorAll(".hero-slide"));
-    if (slides.length <= 1) return;
-
-    let index = 0;
-
-    setInterval(() => {
-      slides[index].classList.remove("active");
-      index = (index + 1) % slides.length;
-      slides[index].classList.add("active");
-    }, 3500);
-  });
-
-  // --------------------
-  // Mini slideshow helper (used in modal banners + normal sections)
-  // --------------------
-  const runningSlideshows = new Set();
-
-  function startMiniSlideshow(slideshowEl) {
-    const slides = Array.from(slideshowEl.querySelectorAll(".mini-slide"));
-    if (slides.length <= 1) return;
-
-    // Ensure exactly one active at start
-    slides.forEach((s, i) => s.classList.toggle("active", i === 0));
-
-    let index = 0;
-    const id = setInterval(() => {
-      slides[index].classList.remove("active");
-      index = (index + 1) % slides.length;
-      slides[index].classList.add("active");
-    }, 3500);
-
-    runningSlideshows.add(id);
-  }
-
-  function stopAllMiniSlideshows() {
-    runningSlideshows.forEach((id) => clearInterval(id));
-    runningSlideshows.clear();
-  }
-
-  // Start mini slideshows already on the page (not modal)
-  document.querySelectorAll("[data-slideshow]").forEach((slideshow) => {
-    startMiniSlideshow(slideshow);
-  });
-
-  // --------------------
-  // Modal (templates + body)
-  // --------------------
-  const modal = document.getElementById("modal");
-  const modalTitle = document.getElementById("modalTitle");
-  const modalBody = document.getElementById("modalBody");
-  const modalLink = document.getElementById("modalLink");
-
-  function openModalFromCard(card) {
-    if (!modal || !modalTitle || !modalBody) return;
-
-    const title = card.getAttribute("data-modal-title") || "More information";
-    const templateId = card.getAttribute("data-modal-template");
-    const body = card.getAttribute("data-modal-body"); // fallback
-
-    modalTitle.textContent = title;
-
-    // Reset content + stop any previous modal banner timers
-    modalBody.innerHTML = "";
-    stopAllMiniSlideshows();
-
-    // If template exists, clone it into modalBody
-    if (templateId) {
-      const tpl = document.getElementById(templateId);
-      if (tpl && tpl.content) {
-        modalBody.appendChild(tpl.content.cloneNode(true));
-
-        // Start mini slideshows inside THIS modal only
-        modalBody.querySelectorAll("[data-slideshow]").forEach((slideshow) => {
-          startMiniSlideshow(slideshow);
-        });
-      } else {
-        // Template ID was set but not found
-        modalBody.innerHTML = `<p>Sorry — the content for this project couldn't be found.</p>`;
-      }
-    } else if (body) {
-      // Fallback: allow HTML if you passed it in data-modal-body
-      modalBody.innerHTML = body;
-      modalBody.querySelectorAll("[data-slideshow]").forEach((slideshow) => {
-        startMiniSlideshow(slideshow);
+  // ---------- Scroll reveal ----------
+  var reveals = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window && reveals.length) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in");
+          io.unobserve(entry.target);
+        }
       });
-    } else {
-      modalBody.innerHTML = `<p>More information coming soon.</p>`;
-    }
+    }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+    reveals.forEach(function (el) { io.observe(el); });
+  } else {
+    reveals.forEach(function (el) { el.classList.add("in"); });
+  }
 
-    // Default CTA link (you can customize later per project if you want)
-    if (modalLink) {
-      modalLink.href = "contact.html";
-      modalLink.textContent = "Support this project";
+  // ---------- Footer year ----------
+  var y = document.getElementById("year");
+  if (y) { y.textContent = new Date().getFullYear(); }
+
+  // ---------- Contact form (placeholder handler) ----------
+  var form = document.getElementById("contact-form");
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var note = document.getElementById("form-note");
+      if (note) { note.hidden = false; }
+      form.reset();
+    });
+  }
+})();
+
+/* ---------- Slideshows (fade + optional dots/arrows) ---------- */
+function initSlideshow(ss) {
+  var slides = ss.querySelectorAll(".slide");
+  if (slides.length < 2) { if (slides[0]) slides[0].classList.add("active"); return; }
+  var dotsWrap = ss.querySelector(".ss-dots");
+  var i = 0, timer;
+  if (dotsWrap && !dotsWrap.dataset.built) {
+    dotsWrap.dataset.built = "1";
+    slides.forEach(function (_, idx) {
+      var b = document.createElement("button");
+      b.className = "ss-dot" + (idx === 0 ? " active" : "");
+      b.setAttribute("aria-label", "Go to slide " + (idx + 1));
+      b.addEventListener("click", function () { go(idx); reset(); });
+      dotsWrap.appendChild(b);
+    });
+  }
+  function go(n) {
+    slides[i].classList.remove("active");
+    if (dotsWrap) dotsWrap.children[i].classList.remove("active");
+    i = (n + slides.length) % slides.length;
+    slides[i].classList.add("active");
+    if (dotsWrap) dotsWrap.children[i].classList.add("active");
+  }
+  function reset() { clearInterval(timer); timer = setInterval(function () { go(i + 1); }, 4500); }
+  var np = ss.querySelector(".ss-arrow.next");
+  var pp = ss.querySelector(".ss-arrow.prev");
+  if (np) np.addEventListener("click", function () { go(i + 1); reset(); });
+  if (pp) pp.addEventListener("click", function () { go(i - 1); reset(); });
+  reset();
+}
+
+/* ---------- Mini slideshow (modal banners: .mini-slide) ---------- */
+var miniTimers = new Set();
+function startMiniSlideshow(el) {
+  var slides = Array.prototype.slice.call(el.querySelectorAll(".mini-slide"));
+  if (slides.length < 2) return;
+  slides.forEach(function (s, idx) { s.classList.toggle("active", idx === 0); });
+  var i = 0;
+  var id = setInterval(function () {
+    slides[i].classList.remove("active");
+    i = (i + 1) % slides.length;
+    slides[i].classList.add("active");
+  }, 3500);
+  miniTimers.add(id);
+}
+function stopAllMini() { miniTimers.forEach(function (id) { clearInterval(id); }); miniTimers.clear(); }
+
+document.querySelectorAll(".slideshow").forEach(initSlideshow);
+
+/* ---------- Project modal ---------- */
+(function () {
+  var modal = document.getElementById("modal");
+  if (!modal) return;
+  var modalTitle = document.getElementById("modalTitle");
+  var modalBody = document.getElementById("modalBody");
+  var modalLink = document.getElementById("modalLink");
+
+  function openFromCard(card) {
+    var title = card.getAttribute("data-modal-title") || "More information";
+    var templateId = card.getAttribute("data-modal-template");
+    modalTitle.textContent = title;
+    modalBody.innerHTML = "";
+    stopAllMini();
+
+    var tpl = templateId ? document.getElementById(templateId) : null;
+    if (tpl && tpl.content) {
+      modalBody.appendChild(tpl.content.cloneNode(true));
+      modalBody.querySelectorAll("[data-slideshow]").forEach(startMiniSlideshow);
+    } else {
+      modalBody.innerHTML = "<p>More information coming soon.</p>";
     }
+    if (modalLink) { modalLink.href = "contact.html"; }
 
     modal.classList.add("open");
     modal.setAttribute("aria-hidden", "false");
-
-    // Prevent background page scrolling while modal open
     document.body.style.overflow = "hidden";
   }
 
-  function closeModal() {
-    if (!modal) return;
-
+  function close() {
     modal.classList.remove("open");
     modal.setAttribute("aria-hidden", "true");
-
-    // Clear modal content and stop timers (prevents stacking)
-    if (modalBody) modalBody.innerHTML = "";
-    stopAllMiniSlideshows();
-
-    // Re-enable background scroll
+    modalBody.innerHTML = "";
+    stopAllMini();
     document.body.style.overflow = "";
   }
 
-  // Clickable project cards
-  document.querySelectorAll(".card.clickable").forEach((card) => {
-    card.addEventListener("click", () => openModalFromCard(card));
+  document.querySelectorAll(".card.clickable, .pcard.clickable").forEach(function (card) {
+    card.addEventListener("click", function () { openFromCard(card); });
   });
 
-  if (modal) {
-    // Close modal when clicking anything with data-close="true"
-    modal.addEventListener("click", (e) => {
-      const target = e.target;
-      if (target && target.getAttribute && target.getAttribute("data-close") === "true") {
-        closeModal();
-      }
-
-      // If user clicks the backdrop (outside the modal card) close it
-      if (target === modal) closeModal();
-    });
-
-    // ESC to close
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape" && modal.classList.contains("open")) closeModal();
-    });
-  }
-
-  // --------------------
-  // Contact form demo
-  // --------------------
-  const msgForm = document.getElementById("messageForm");
-  const formMsg = document.getElementById("formMsg");
-
-  if (msgForm) {
-    msgForm.addEventListener("submit", (e) => {
-      e.preventDefault();
-      if (formMsg) formMsg.textContent = "Thanks! Your message has been received (demo).";
-      msgForm.reset();
-    });
-  }
-});
-
-// =========================
-// Home Hero Slideshow (auto)
-// =========================
-(function () {
-  const slidesWrap = document.getElementById("slides");
-  if (!slidesWrap) return;
-
-  const slides = Array.from(slidesWrap.querySelectorAll(".slide"));
-  const dots = Array.from(document.querySelectorAll(".dot"));
-  const prevBtn = document.getElementById("prevSlide");
-  const nextBtn = document.getElementById("nextSlide");
-
-  let current = slides.findIndex(s => s.classList.contains("is-active"));
-  if (current < 0) current = 0;
-
-  const show = (i) => {
-    slides[current].classList.remove("is-active");
-    dots[current]?.classList.remove("is-active");
-
-    current = (i + slides.length) % slides.length;
-
-    slides[current].classList.add("is-active");
-    dots[current]?.classList.add("is-active");
-  };
-
-  const next = () => show(current + 1);
-  const prev = () => show(current - 1);
-
-  // Auto play
-  let timer = setInterval(next, 5000);
-
-  const resetTimer = () => {
-    clearInterval(timer);
-    timer = setInterval(next, 5000);
-  };
-
-  // Controls
-  nextBtn?.addEventListener("click", () => { next(); resetTimer(); });
-  prevBtn?.addEventListener("click", () => { prev(); resetTimer(); });
-
-  dots.forEach((d, idx) => {
-    d.addEventListener("click", () => { show(idx); resetTimer(); });
+  modal.addEventListener("click", function (e) {
+    var t = e.target;
+    if (t === modal || (t.getAttribute && t.getAttribute("data-close") === "true")) close();
   });
-
-  // Pause on hover (optional but feels premium)
-  slidesWrap.addEventListener("mouseenter", () => clearInterval(timer));
-  slidesWrap.addEventListener("mouseleave", () => resetTimer());
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && modal.classList.contains("open")) close();
+  });
 })();
