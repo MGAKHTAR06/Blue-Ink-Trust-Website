@@ -1037,3 +1037,81 @@ body.contact-page .page-hero-overlay{
   border-top: 1px solid rgba(11,27,42,0.10);
 }
 
+
+/* =========================================
+   UNIFIED BANNER SIZE (all pages identical)
+   One height for every hero/banner so Home,
+   About, Projects, Contact, India & Birmingham
+   all match. Change --banner-h to resize all.
+   ========================================= */
+:root{
+  --banner-h: 450px;
+}
+
+/* Home page rolling banner */
+.hero .slides{
+  height: var(--banner-h) !important;
+}
+
+/* All inner-page heroes (background-image + slideshow variants) */
+.page-hero,
+.page-hero.hero-with-slideshow,
+.page-hero.hero-bottom,
+.hero-with-slideshow,
+.hero-bottom,
+.about-page .about-hero,
+body.contact-page .page-hero,
+.birmingham-page .page-hero{
+  height: var(--banner-h) !important;
+  min-height: var(--banner-h) !important;
+  max-height: var(--banner-h) !important;
+}
+
+/* Keep contact overlay filling the unified height */
+body.contact-page .page-hero,
+body.contact-page .page-hero-overlay.hero-bottom{
+  min-height: var(--banner-h) !important;
+}
+
+/* Smaller, but still identical across pages, on mobile */
+@media (max-width: 640px){
+  :root{
+    --banner-h: 320px;
+  }
+  .hero .slides{ height: var(--banner-h) !important; }
+}
+
+/* =========================================
+   FULL-WIDTH BANNERS
+   Make the home page banner span edge-to-edge
+   like every inner page hero (no contained card).
+   ========================================= */
+.home-page .hero{ padding: 0; }
+
+.home-page .hero .container{
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+.home-page .slideshow{
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+}
+
+/* Keep the home banner text aligned with the site's
+   1100px content column instead of hugging the edge */
+.home-page .slide-overlay{
+  padding-inline: max(22px, calc((100% - 1100px) / 2));
+}
+
+/* =========================================
+   PROJECTS HERO – lower image to show heads
+   Shifts the visible crop toward the top of the
+   photo so people's heads are no longer cut off.
+   ========================================= */
+body.projects-page .hero-slideshow .hero-slide{
+  object-position: center 20%;
+}
