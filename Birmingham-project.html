@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blue Ink Trust | Birmingham Project</title>
+  <link rel="stylesheet" href="Styles.css" />
+</head>
+<body class="birmingham-page">
+
+
+<!-- Use the SAME header as above (copy/paste from about.html) -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="index.html" aria-label="Blue Ink Trust Home">
+        <img src="Media/Blue Ink Trust Logo.png" alt="BIT logo">
+      <span class="logo-text">Blue Ink Trust</span>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <a class="nav-link" href="index.html">Home</a>
+
+      <div class="nav-dropdown">
+        <button class="nav-link nav-dropbtn active" type="button" aria-haspopup="true" aria-expanded="false">
+          About ▾
+        </button>
+        <div class="nav-dropmenu" role="menu">
+          <a class="nav-link" href="about.html" role="menuitem">About Overview</a>
+          <a class="nav-link" href="birmingham-project.html" role="menuitem">Birmingham Project</a>
+          <a class="nav-link" href="india-project.html" role="menuitem">India Project</a>
+        </div>
+      </div>
+
+      <a class="nav-link" href="projects.html">Projects</a>
+      <a class="nav-link" href="contact.html">Contact</a>
+    </nav>
+
+    <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="hamburger" aria-hidden="true"></span>
+    </button>
+  </div>
+
+  <nav id="mobile-nav" class="nav-mobile" aria-label="Mobile">
+    <a class="nav-link" href="index.html">Home</a>
+    <details class="mobile-drop">
+      <summary class="nav-link">About</summary>
+      <div class="mobile-drop-links">
+        <a class="nav-link" href="about.html">About Overview</a>
+        <a class="nav-link" href="birmingham-project.html">Birmingham Project</a>
+        <a class="nav-link" href="india-project.html">India Project</a>
+      </div>
+    </details>
+    <a class="nav-link" href="projects.html">Projects</a>
+    <a class="nav-link" href="contact.html">Contact</a>
+    <a class="btn btn-primary" href="contact.html">Donate / Get Involved</a>
+  </nav>
+</header>
+
+<main id="main">
+  <!-- Picture banner -->
+<section class="page-hero hero-bottom" style="background-image:url('Media/About Birmingham.jpg');">
+  <div class="page-hero-overlay">
+    <div class="container">
+      <h1>Birmingham Project</h1>
+        <p>A Saturday supplementary school supporting students in Birmingham to bridge learning gaps and reach their full potential.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Text banner -->
+  <section class="text-banner">
+    <div class="container text-banner-inner">
+      <strong>Reducing educational inequality and helpping students build strong foundations for their future.</strong> 
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="glass-panel">
+        <h2>What we do in Birmingham</h2>
+
+        <!-- Embedded image into text (text left, image right) -->
+        <section class="content-block">
+          <div class="content-text">
+            <p>
+Blue Ink Trust delivers a weekly supplementary education programme in Birmingham, operating every Saturday and on selected weekday evenings. The programme is specifically designed to support students who may be at risk of academic underachievement, while also enabling all learners within our provision to realise their full potential. The initiative is centred on narrowing attainment gaps, strengthening core academic competencies, and fostering confidence within a nurturing and inclusive learning environment.
+            </p>
+            <p>
+The supplementary school provides structured instruction across the following areas:		<ul>
+			<li>English and English grammar</li>
+			<li>Mathematics</li>
+			<li>Science</li>
+			<li>Verbal and non-verbal reasoning</li>
+		</ul>
+            </p>
+	<p><strong>When and where</strong></p>
+<p>
+Sessions take place every Saturday from 10:00am to 2:00pm, alongside evening sessions offering extended learning opportunities. Additional programmes are delivered during school holidays, with enhanced timetables to provide continued academic engagement. These holiday provisions are intentionally designed to ensure that children and young people who may otherwise lack access to educational trips or enrichment activities can participate in a safe, structured, and intellectually stimulating environment.
+</p>
+<p>
+<section class="panel">
+<p><strong>For more information please contact Mr. Akhtar on 07817237765</strong></p>
+
+  <h3>Location</h3>
+  <p>
+    Acocks Green Methodist Church, 1 Botteville Road, Acocks Green, Birmingham, B27 7YE
+  </p>
+
+  <div class="map-embed" aria-label="Map showing Acocks Green Methodist Church">
+    <iframe
+      title="Acocks Green Methodist Church Map"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      src="https://www.google.com/maps?q=Acocks%20Green%20Methodist%20Church%201%20Botteville%20Road%20Acocks%20Green%20Birmingham%20B27%207YE&output=embed">
+    </iframe>
+  </div>
+
+  <p style="margin-top:10px;">
+    <a class="btn btn-primary" target="_blank" rel="noopener"
+       href="https://www.google.com/maps?q=Acocks%20Green%20Methodist%20Church%201%20Botteville%20Road%20Acocks%20Green%20Birmingham%20B27%207YE">
+      Open in Google Maps
+    </a>
+  </p>
+</section>
+
+          </div>
+
+          <div class="content-media">
+            <img src="Media/About birmingham 1.png" alt="Birmingham community support work">
+          </div>
+        </section>
+
+
+        <div class="center" style="margin-top:14px;">
+                </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© <span id="year"></span> Blue Ink Trust</p>
+      <p>Charity No: 1136307</p>
+
+    <div class="footer-links">
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
